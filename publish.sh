@@ -22,9 +22,9 @@
 #      The gate is the MINIMUM across the plugin's skills. Check one skill
 #      before publishing with:
 #        tessl review run quality plugins/<plugin>/skills/<skill> --json -f
-#      (-f forces a fresh review; results are cached. The score is not
-#      deterministic — we measured a 3-point swing on an unedited file — so
-#      leave margin rather than landing on exactly 80.)
+#      (-f forces a fresh review; results are cached. Scores vary a few
+#      points between reviews of the same file, so leave margin rather than
+#      landing on exactly 80.)
 set -euo pipefail
 
 WORKSPACE="${WORKSPACE:-tessleng}"

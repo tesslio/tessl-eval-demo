@@ -40,9 +40,6 @@ MODEL=claude-sonnet-4-6 RUNS=1 ./run.sh
 `https://tessl.io/workspaces/<your-workspace>/eval-runs/<id>`, or from the
 terminal with `tessl eval view <id>`.
 
-Only use `./publish.sh` if you want to **change** the skills — see
-[The loop this exists to demonstrate](#the-loop-this-exists-to-demonstrate).
-
 ## What's in here
 
 ```
@@ -61,11 +58,50 @@ scenarios/
   linkbox-safe-handoff/
 arms.json           skills vs no skills
 arms-models.json    opus vs sonnet vs haiku, all with skills
-publish.sh          push plugins/ to the tessleng workspace
+publish.sh          push plugins/ to a workspace you control
 run.sh              both eval runs
 ```
 
-## The loop this exists to demonstrate
+### Two arms files, one variable each
+
+An arm is one configuration to compare. `arms.json` holds the skills
+constant and varies whether they are installed; `arms-models.json` holds the
+skills installed and varies the model:
+
+```json
+[
+  { "label": "no-components", "includeContext": false },
+  { "label": "components", "includeContext": true, "fixtures": { ... } }
+]
+```
+
+Arms can carry a per-arm `model`, which is what makes the model comparison a
+single run rather than three. Keeping one variable per run means each run
+page answers one question.
+
+## Point it at your own codebase
+
+Replace `scenarios/repo/` with a checkout of your own service and rewrite the
+tickets. The wiring in each scenario's `scenario.json` does not change:
+
+```json
+{ "fixtures": { "codebase": { "type": "directory", "path": "../repo", "installPath": "." } } }
+```
+
+That installs the codebase at the sandbox root before the agent starts, so it
+reads real files rather than a description of them. Several scenarios can
+share one `repo/`, which is how a real team would use this — one codebase,
+many tickets.
+
+A scenario is three files:
+
+| file | what it is |
+|---|---|
+| `task.md` | the ticket, as an engineer would receive it |
+| `criteria.json` | a weighted checklist the scorer grades against |
+| `scenario.json` | which codebase to install |
+
+## The improvement loop
 
 The plugins are **source here, not a dependency**. That makes the full cycle
 available:
@@ -78,10 +114,7 @@ edit a skill in plugins/  ->  bump its version  ->  ./publish.sh
                               ./run.sh  ->  did the number move?
 ```
 
-An eval that scores badly tells you something is wrong. Owning the skill
-source is what lets you then fix it and prove the fix.
-
-To run that loop you publish into a workspace you control:
+Publish into a workspace you control:
 
 ```bash
 WORKSPACE=my-workspace ./publish.sh
@@ -89,26 +122,14 @@ sed -i '' 's|tessleng/sdlc-|my-workspace/sdlc-|g' arms.json arms-models.json
 ./run.sh
 ```
 
-There is a worked example of one full lap further down, under
-[linkbox-safe-handoff](#linkbox-safe-handoff-a-worked-example-of-the-loop):
-a scenario stuck at the floor, traced to a specific line in a skill, fixed,
-republished, and re-measured.
+An eval that scores badly tells you something is wrong. Owning the skill
+source is what lets you then fix it and measure the fix.
 
 ## The toy codebase
 
-`scenarios/repo/` is `linkbox`, a small multi-tenant URL shortener. Swap it
-for a checkout of your own service and rewrite the tickets — the wiring in
-each scenario's `scenario.json` does not change:
-
-```json
-{ "fixtures": { "codebase": { "type": "directory", "path": "../repo", "installPath": "." } } }
-```
-
-That installs the codebase at the sandbox root before the agent starts, so
-it reads real files rather than a description of them.
-
-It ships with two real bugs, both confirmed by direct repro before the
-scenarios were written, and neither caught by the existing tests:
+`scenarios/repo/` is `linkbox`, a small multi-tenant URL shortener. It ships
+with two real bugs, both confirmed by direct repro before the scenarios were
+written, and neither caught by its existing tests:
 
 - **`src/store.js`** — `codesByUrl` is one module-level map shared across
   every namespace, so two tenants shortening the same URL get the same code.
@@ -118,18 +139,8 @@ scenarios were written, and neither caught by the existing tests:
   next entry is skipped. A sweep with two or more due links silently leaves
   some behind. The code reads as correct.
 
-## Running it
-
-```
-./publish.sh     # once, to get the plugins into the registry
-./run.sh         # both runs, n=3
-```
-
-`MODEL` and `RUNS` override the defaults:
-
-```
-MODEL=claude-opus-4-6 RUNS=1 ./run.sh
-```
+Planting a real, findable bug is what gives a ticket something to be right or
+wrong about.
 
 ## Results
 
@@ -151,72 +162,58 @@ Means out of 100 over `n=3`, against `tessleng/sdlc-*@0.1.1`.
 | `linkbox-namespace-isolation` | 96.7 | 96.7 | 83.3 |
 | `linkbox-safe-handoff` | **70.0** | 56.7 | 40.0 |
 
-Read the activation column before the score. Two runs can tie while only one
-of them ever loaded a skill, and a gap with no activation behind it is noise.
-
-## What the scenarios are for
-
-| scenario | what it tests | how it behaves |
-|---|---|---|
-| `linkbox-expiry-sweep` | full delivery loop over a subtle bug | **strongest** — skills find the bug, baseline doesn't |
-| `linkbox-namespace-isolation` | same loop over an obvious bug | strong on activation, 6 skills every run |
-| `linkbox-safe-handoff` | the "don't integrate without asking" gate | improving, still erratic — see below |
-
-A rubric that grades only correctness will not separate the arms, because a
-competent model gets correctness right unaided. The gap comes from the
-process items — whether a plan, a review, and a verification step actually
-happened. `linkbox-expiry-sweep` works because its bug is hard enough that
-correctness is contested too.
-
-### `linkbox-safe-handoff`: a worked example of the loop
-
-This scenario started at the floor — 13-30 across all three models, with the
-skill it tests never loading once in six runs.
-
-The cause was a contradiction. The router loads
-`finishing-a-development-branch` *"only when the user explicitly asks to
-integrate, push, or create a pull request"*, and that skill's description
-gave no examples of what such a request sounds like. A ticket that raised
-integration without using the router's exact vocabulary never reached it.
-
-Two changes: the skill's description now names concrete triggers ("finish
-this branch", "merge my work", "open a PR") inside its authorization clause,
-and the ticket asks for integration options in plainer terms.
-
-| model | score before | now | `finishing-a-development-branch` loads? |
-|---|---|---|---|
-| Sonnet | 13.3 | **70.0** | yes, all 3 runs |
-| Opus | 16.7 | 56.7 | never |
-| Haiku | 30.0 | 40.0 | never |
-
-The activation column separates the two changes. On Sonnet the skill now
-loads every run and the score moves most. On Opus and Haiku it still never
-loads, so their smaller gains come from the ticket wording alone.
-
-**The remaining defect is now well isolated:** Opus will not load the handoff
-skill even when the user asks to integrate in plain language. That is a skill
-or router problem, not a scenario problem, and it is fixable in `plugins/`.
-
-## Notes
-
-- Scores are means out of 100 over `n=3`. Treat a gap with overlapping
-  ranges as noise; the activation record (which skills actually fired) is
-  usually more informative than the score.
-- `forceContextActivation: true` is pinned in both arms files. It is the
-  default for any arm with `includeContext: true`, set explicitly so it
-  cannot drift.
-- Both arms files carry the same four plugins. When bumping a version,
-  update it in both.
-
-## Run ids
-
 | run | id |
 |---|---|
 | skills vs none, Sonnet, n=3 | `01a0c983-386f-70db-a6d5-c3df55ae978d` |
 | model comparison, n=3 | `01a0c983-4536-73da-b3a5-2c11db7d20b8` |
 
-View either at `https://tessl.io/workspaces/tessleng/eval-runs/<id>`.
+One cell of the skills-vs-none sweep did not score, so
+`linkbox-namespace-isolation` without skills is a mean of two runs rather
+than three.
 
-The skills-vs-none run reports `failed`: one of its eighteen cells never
-scored, so `linkbox-namespace-isolation` without skills is a mean of two runs
-rather than three. The other seventeen are complete.
+## Writing a scenario that actually separates the arms
+
+Most of the work is here, and most first attempts do not discriminate.
+
+**Grade process, not just correctness.** A competent model gets correctness
+right unaided, so a rubric made only of "did it fix the bug" ties at the
+ceiling in both arms. The separation comes from items like
+`continuous_composed_flow` and `review_and_fix_loop` — whether a plan, a
+review and a verification step actually happened. `linkbox-expiry-sweep` is
+the strongest scenario here because its bug is subtle enough that correctness
+is contested too, so both halves of the rubric do work.
+
+**Do not instruct the behaviour you are grading.** If the ticket says "verify
+the claim before building on it" and the rubric awards points for verifying
+on the agent's own initiative, both arms score full marks and the scenario
+measures nothing.
+
+**Read activation before score.** Every run records which skills the agent
+actually invoked. Two arms can tie while only one of them ever loaded a
+skill — identical outcome, completely different process. A gap with no
+activation behind it is noise, not evidence.
+
+**Use activation to diagnose a scenario that will not separate.**
+`linkbox-safe-handoff` tests a gate: the agent should present integration
+options rather than merging on its own. It sat near the floor on every model,
+and the activation record showed why — the skill it tests was never loading.
+The router loads `finishing-a-development-branch` only when the user
+explicitly asks to integrate, and that skill's description gave no examples
+of what such a request sounds like. Adding concrete trigger phrases to the
+description, and asking for integration in plainer terms in the ticket,
+moved Sonnet from 13.3 to 70.0 with the skill now loading on every run. On
+Opus and Haiku it still never loads, which is visible in the activation
+record and remains an open problem.
+
+**Repeat before believing a gap.** Everything above is `n=3`. At `n=1` a
+reversal can appear and disappear between runs; treat overlapping ranges as
+no result.
+
+## Notes
+
+- `forceContextActivation: true` is pinned in both arms files. It is the
+  default for any arm with `includeContext: true`, set explicitly so it
+  cannot drift.
+- Both arms files carry the same four plugins. When bumping a version,
+  update it in both.
+- The skills in `plugins/` are derived from Superpowers (MIT). See `NOTICE`.
