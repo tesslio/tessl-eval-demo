@@ -85,13 +85,36 @@ scenarios were written, and neither caught by the existing tests:
 MODEL=claude-opus-4-6 RUNS=1 ./run.sh
 ```
 
+## Results
+
+Means out of 100 over `n=3`, against `tessleng/sdlc-*@0.1.1`.
+
+**Do the skills help?** (Sonnet)
+
+| scenario | without | with | skills fired |
+|---|---|---|---|
+| `linkbox-expiry-sweep` | 73.3 | **90.0** | 6-7 vs 0 |
+| `linkbox-namespace-isolation` | 85.0 | **100** | 6 every run vs 0 |
+| `linkbox-safe-handoff` | 36.7 | 40.0 | erratic: 6, 1, 0 |
+
+**Which model?** (all arms with skills)
+
+| scenario | Sonnet | Opus | Haiku |
+|---|---|---|---|
+| `linkbox-expiry-sweep` | 86.7 | **96.7** | 60.0 |
+| `linkbox-namespace-isolation` | 96.7 | 96.7 | 83.3 |
+| `linkbox-safe-handoff` | **70.0** | 56.7 | 40.0 |
+
+Read the activation column before the score. Two runs can tie while only one
+of them ever loaded a skill, and a gap with no activation behind it is noise.
+
 ## What the scenarios are for
 
 | scenario | what it tests | how it behaves |
 |---|---|---|
 | `linkbox-expiry-sweep` | full delivery loop over a subtle bug | **strongest** — skills find the bug, baseline doesn't |
-| `linkbox-namespace-isolation` | same loop over an obvious bug | flat — both arms find it, so only process separates them |
-| `linkbox-safe-handoff` | the "don't integrate without asking" gate | weakest — see below |
+| `linkbox-namespace-isolation` | same loop over an obvious bug | strong on activation, 6 skills every run |
+| `linkbox-safe-handoff` | the "don't integrate without asking" gate | improving, still erratic — see below |
 
 A rubric that grades only correctness will not separate the arms, because a
 competent model gets correctness right unaided. The gap comes from the
@@ -99,13 +122,34 @@ process items — whether a plan, a review, and a verification step actually
 happened. `linkbox-expiry-sweep` works because its bug is hard enough that
 correctness is contested too.
 
-`linkbox-safe-handoff` is the open problem, and it is instructive. The
-router says to load `finishing-a-development-branch` *"only when the user
-explicitly asks to integrate, push, or create a pull request"* — so a ticket
-that leaves the integration decision open never loads the skill it is trying
-to test. The ticket now raises integration explicitly without authorising
-it. If that still does not activate reliably, the fix belongs in the router,
-which is exactly the loop above.
+### `linkbox-safe-handoff`: a worked example of the loop
+
+This scenario started at the floor — 13-30 across all three models, with the
+skill it tests never loading once in six runs.
+
+The cause was a contradiction. The router loads
+`finishing-a-development-branch` *"only when the user explicitly asks to
+integrate, push, or create a pull request"*, and that skill's description
+gave no examples of what such a request sounds like. A ticket that raised
+integration without using the router's exact vocabulary never reached it.
+
+Two changes: the skill's description now names concrete triggers ("finish
+this branch", "merge my work", "open a PR") inside its authorization clause,
+and the ticket asks for integration options in plainer terms.
+
+| model | score before | now | `finishing-a-development-branch` loads? |
+|---|---|---|---|
+| Sonnet | 13.3 | **70.0** | yes, all 3 runs |
+| Opus | 16.7 | 56.7 | never |
+| Haiku | 30.0 | 40.0 | never |
+
+The activation column separates the two changes. On Sonnet the skill now
+loads every run and the score moves most. On Opus and Haiku it still never
+loads, so their smaller gains come from the ticket wording alone.
+
+**The remaining defect is now well isolated:** Opus will not load the handoff
+skill even when the user asks to integrate in plain language. That is a skill
+or router problem, not a scenario problem, and it is fixable in `plugins/`.
 
 ## Notes
 
@@ -117,3 +161,16 @@ which is exactly the loop above.
   cannot drift.
 - Both arms files carry the same four plugins. When bumping a version,
   update it in both.
+
+## Run ids
+
+| run | id |
+|---|---|
+| skills vs none, Sonnet, n=3 | `01a0c983-386f-70db-a6d5-c3df55ae978d` |
+| model comparison, n=3 | `01a0c983-4536-73da-b3a5-2c11db7d20b8` |
+
+View either at `https://tessl.io/workspaces/tessleng/eval-runs/<id>`.
+
+The skills-vs-none run reports `failed`: one of its eighteen cells never
+scored, so `linkbox-namespace-isolation` without skills is a mean of two runs
+rather than three. The other seventeen are complete.
