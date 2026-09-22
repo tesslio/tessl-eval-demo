@@ -1,0 +1,55 @@
+NOTICE
+  s_121aef358488c8::t_dc8667f22f9996 1-19
+plugins/sdlc-planning/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_a098d8b5c437fd 3,5
+plugins/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_95fffe2e60bc09 281,283-285
+  s_121aef358488c8::t_2e942bc4630f87 114
+  s_121aef358488c8::t_729e7d95dea114 3
+plugins/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_a098d8b5c437fd 3,5
+plugins/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_e85b7acd2a01d0 3
+arms.json
+  s_121aef358488c8::t_a098d8b5c437fd 8-11
+plugins/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_31a382638c7028 14
+  s_121aef358488c8::t_31e374de29b6b2 30
+  s_121aef358488c8::t_0bcc204b593ffa 3
+plugins/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_a098d8b5c437fd 3,5
+LICENSE
+  s_121aef358488c8::t_434f77cccf509a 1-21
+plugins/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_a098d8b5c437fd 3,5
+arms-models.json
+  s_121aef358488c8::t_a098d8b5c437fd 8-11,20-23,32-35
+plugins/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_f1eebef3184934 3
+  s_121aef358488c8::t_ec961c15d6d112 206
+plugins/sdlc-planning/skills/writing-plans/SKILL.md
+  s_121aef358488c8::t_1b12adf5e4d622 3
+plugins/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_6ad952e1deea4a 34,95
+  s_121aef358488c8::t_5a1a5ca4f774d8 3
+plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_c6aa6f253cc109 3
+publish.sh
+  s_121aef358488c8::t_0447743c639560 2-3,5-6,8-17,20-23,27-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "817d8cb7af5b5a454199d22c14ba785788550ea0",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
