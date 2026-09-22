@@ -10,6 +10,39 @@ agent skills:
 Everything here is self-contained: the skills being measured, the codebase
 they are measured against, and the tickets used to measure them.
 
+## Start here
+
+You need the Tessl CLI and an account. Eval runs consume credits.
+
+```bash
+# 1. install and sign in
+curl -fsSL https://install.tessl.io | sh
+tessl login
+
+# 2. give this directory its own project, in a workspace you can write to
+tessl project create --workspace <your-workspace>
+
+# 3. run both eval sweeps
+./run.sh
+```
+
+That works on a fresh clone. The four plugins in `arms.json` are published
+and public, so nothing needs building or publishing first — `run.sh` pulls
+them from the registry.
+
+Cheaper first run, one model and one repetition instead of three:
+
+```bash
+MODEL=claude-sonnet-4-6 RUNS=1 ./run.sh
+```
+
+`run.sh` prints a run id for each sweep. Watch them at
+`https://tessl.io/workspaces/<your-workspace>/eval-runs/<id>`, or from the
+terminal with `tessl eval view <id>`.
+
+Only use `./publish.sh` if you want to **change** the skills — see
+[The loop this exists to demonstrate](#the-loop-this-exists-to-demonstrate).
+
 ## What's in here
 
 ```
@@ -47,6 +80,19 @@ edit a skill in plugins/  ->  bump its version  ->  ./publish.sh
 
 An eval that scores badly tells you something is wrong. Owning the skill
 source is what lets you then fix it and prove the fix.
+
+To run that loop you publish into a workspace you control:
+
+```bash
+WORKSPACE=my-workspace ./publish.sh
+sed -i '' 's|tessleng/sdlc-|my-workspace/sdlc-|g' arms.json arms-models.json
+./run.sh
+```
+
+There is a worked example of one full lap further down, under
+[linkbox-safe-handoff](#linkbox-safe-handoff-a-worked-example-of-the-loop):
+a scenario stuck at the floor, traced to a specific line in a skill, fixed,
+republished, and re-measured.
 
 ## The toy codebase
 

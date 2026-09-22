@@ -39,11 +39,11 @@ Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md
 - `{BASE_SHA}` - Starting commit
 - `{HEAD_SHA}` - Ending commit
 
-**3. Act on feedback, in order:**
-1. Fix all Critical issues immediately
-2. Fix all Important issues before proceeding
-3. Record Minor issues for later
-4. Push back with technical reasoning if the reviewer is wrong
+**3. Act on feedback:**
+- Fix Critical issues immediately
+- Fix Important issues before proceeding
+- Note Minor issues for later
+- Push back if reviewer is wrong (with reasoning)
 
 ## Example
 
@@ -76,13 +76,20 @@ You: [Fix progress indicators]
 
 | Excuse | Reality |
 |--------|---------|
-| "I'll just review the diff myself" | Reviewing inline burns the context you need to keep driving the work. Dispatch a subagent instead — only the findings come back. |
-| "The reviewer needs my session history" | Hand it precisely crafted context, never your session's history. |
+| "I'll just review the diff myself instead of dispatching a reviewer" | You're the coordinator — reviewing the diff inline burns the context window you need to keep driving the work. Dispatch a reviewer subagent: the diff and the evaluation live in its context, and only the findings come back to you. |
+| "The reviewer needs my whole session history to understand the change" | Hand it precisely crafted context, never your session's history. That keeps the reviewer on the work product, not your thought process. |
 
 ## Red Flags
 
-**Never:** skip review because "it's simple", ignore Critical issues, proceed with unfixed Important issues, or argue with valid feedback.
+**Never:**
+- Skip review because "it's simple"
+- Ignore Critical issues
+- Proceed with unfixed Important issues
+- Argue with valid technical feedback
 
-**If the reviewer is wrong:** push back with technical reasoning, show code/tests that prove it works, or request clarification.
+**If reviewer wrong:**
+- Push back with technical reasoning
+- Show code/tests that prove it works
+- Request clarification
 
 See template at: [code-reviewer.md](references/code-reviewer.md)
