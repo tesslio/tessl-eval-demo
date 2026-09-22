@@ -1,0 +1,38 @@
+[
+  {
+    "label": "opus",
+    "model": "claude-opus-4-6",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": { "definition": { "type": "plugin", "name": "tessleng/sdlc-planning", "version": "0.1.0" } },
+      "assurance": { "definition": { "type": "plugin", "name": "tessleng/sdlc-assurance", "version": "0.1.0" } },
+      "implementation": { "definition": { "type": "plugin", "name": "tessleng/sdlc-implementation", "version": "0.1.0" } },
+      "router": { "definition": { "type": "plugin", "name": "tessleng/sdlc-router", "version": "0.1.0" } }
+    }
+  },
+  {
+    "label": "sonnet",
+    "model": "claude-sonnet-4-6",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": { "definition": { "type": "plugin", "name": "tessleng/sdlc-planning", "version": "0.1.0" } },
+      "assurance": { "definition": { "type": "plugin", "name": "tessleng/sdlc-assurance", "version": "0.1.0" } },
+      "implementation": { "definition": { "type": "plugin", "name": "tessleng/sdlc-implementation", "version": "0.1.0" } },
+      "router": { "definition": { "type": "plugin", "name": "tessleng/sdlc-router", "version": "0.1.0" } }
+    }
+  },
+  {
+    "label": "haiku",
+    "model": "claude-haiku-4-5",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": { "definition": { "type": "plugin", "name": "tessleng/sdlc-planning", "version": "0.1.0" } },
+      "assurance": { "definition": { "type": "plugin", "name": "tessleng/sdlc-assurance", "version": "0.1.0" } },
+      "implementation": { "definition": { "type": "plugin", "name": "tessleng/sdlc-implementation", "version": "0.1.0" } },
+      "router": { "definition": { "type": "plugin", "name": "tessleng/sdlc-router", "version": "0.1.0" } }
+    }
+  }
+]

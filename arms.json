@@ -1,0 +1,14 @@
+[
+  { "label": "no-components", "includeContext": false },
+  {
+    "label": "components",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": { "definition": { "type": "plugin", "name": "tessleng/sdlc-planning", "version": "0.1.0" } },
+      "assurance": { "definition": { "type": "plugin", "name": "tessleng/sdlc-assurance", "version": "0.1.0" } },
+      "implementation": { "definition": { "type": "plugin", "name": "tessleng/sdlc-implementation", "version": "0.1.0" } },
+      "router": { "definition": { "type": "plugin", "name": "tessleng/sdlc-router", "version": "0.1.0" } }
+    }
+  }
+]

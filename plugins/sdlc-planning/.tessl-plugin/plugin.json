@@ -1,0 +1,7 @@
+{
+  "name": "tessleng/sdlc-planning",
+  "version": "0.1.0",
+  "description": "Planning guidance for turning an approved engineering task into an executable implementation plan.",
+  "private": true,
+  "skills": "./skills"
+}

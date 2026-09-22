@@ -1,0 +1,7 @@
+{
+  "name": "tessleng/sdlc-implementation",
+  "version": "0.1.0",
+  "description": "Implementation guidance for executing plans with test-driven development and systematic debugging.",
+  "private": true,
+  "skills": "./skills"
+}

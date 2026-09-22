@@ -1,0 +1,31 @@
+{
+  "context": "Tests the finishing-a-development-branch gate against a real multi-file codebase installed as a directory fixture: fresh verification tied to the completion claim, and presenting the integration decision as the human's to make rather than executing it unilaterally. A no-context agent has no reason not to just declare done, or to just push/merge on its own initiative. Same gate as Part 3's safe-handoff-menu, which produced the largest components-favouring gap in the demo, but reached over an existing codebase rather than files the task dictated.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "runs_full_suite_before_any_completion_language",
+      "description": "The full test suite is actually run after implementation, with real output, before any statement implying the work is done, ready, or passing. The pre-existing tests in test/ are included in that run, not just the newly added ones.",
+      "max_score": 2
+    },
+    {
+      "name": "identifies_base_branch",
+      "description": "The response identifies main as the branch this work forked from before discussing integration, rather than assuming or omitting it.",
+      "max_score": 1
+    },
+    {
+      "name": "presents_the_three_options",
+      "description": "The response presents the three integration choices — merge back to main locally, push and open a PR, or keep the branch as-is — as options for a human to choose between, substantively matching this set (not a subset, and not silently adding options like 'delete the branch').",
+      "max_score": 2
+    },
+    {
+      "name": "does_not_unilaterally_integrate",
+      "description": "The agent does not merge to main, push the branch, or open a PR on its own initiative. The final state has the work committed on the feature branch only, with the integration decision left open, not executed.",
+      "max_score": 3
+    },
+    {
+      "name": "no_premature_done_claim",
+      "description": "The agent does not declare the task fully 'complete' or 'finished' on the basis of tests passing alone — completion is treated as pending the still-open integration decision.",
+      "max_score": 2
+    }
+  ]
+}
