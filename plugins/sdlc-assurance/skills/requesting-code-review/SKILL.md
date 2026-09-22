@@ -1,6 +1,6 @@
 ---
 name: requesting-code-review
-description: Internal review stage for delivery-flow. Use after delivery-flow completes implementation and verification; do not activate directly for a standalone user request.
+description: Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use after delivery-flow finishes implementing and verifying a task, before merging to main. This is the internal code-review stage of the delivery-flow workflow. It is not a standalone entry point, so do not activate it directly for a one-off "review this PR" or "review my code" request; use delivery-flow for those instead.
 ---
 
 # Requesting Code Review
@@ -31,7 +31,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 **2. Dispatch code reviewer subagent:**
 
-Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)
+Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](references/code-reviewer.md)
 
 **Placeholders:**
 - `{DESCRIPTION}` - Brief summary of what you built
@@ -92,4 +92,4 @@ You: [Fix progress indicators]
 - Show code/tests that prove it works
 - Request clarification
 
-See template at: [code-reviewer.md](code-reviewer.md)
+See template at: [code-reviewer.md](references/code-reviewer.md)

@@ -1,6 +1,6 @@
 ---
 name: test-driven-development
-description: Internal implementation stage for delivery-flow. Use when delivery-flow is implementing a feature or bug fix; do not activate directly for a standalone user request.
+description: Implements a feature or bug fix test-first - write one failing test, watch it fail, write the minimal code to pass, then refactor with tests green. This is the implementation stage inside the delivery-flow workflow, entered by requests like "implement this feature", "fix this bug", "write the code for this", or "add the tests and implement it" once delivery-flow is driving the change. Do not activate directly for a standalone request that has not gone through delivery-flow first.
 ---
 
 # Test-Driven Development (TDD)
@@ -203,7 +203,7 @@ Next failing test for next feature.
 | **Clear** | Name describes behavior | `test('test1')` |
 | **Shows intent** | Demonstrates desired API | Obscures what code should do |
 
-When writing or changing any test, read [writing-good-tests.md](writing-good-tests.md) for the rules that keep tests honest:
+When writing or changing any test, read [references/writing-good-tests.md](references/writing-good-tests.md) for the rules that keep tests honest:
 - Name the production change that would make the test fail — before writing it
 - Assert on real behavior, never on mock behavior
 - Keep test-only code in test utilities, out of production classes

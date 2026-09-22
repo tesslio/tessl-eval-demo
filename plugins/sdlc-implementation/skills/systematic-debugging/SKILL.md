@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Internal debugging stage for delivery-flow. Use when delivery-flow encounters a bug, test failure, or unexpected behavior; standalone bug requests should enter through delivery-flow first.
+description: Investigates a test failure, bug, or unexpected behavior to find its root cause before proposing any fix - reproduce the issue, trace the data flow, form and test one hypothesis at a time, then implement and verify the fix. This is the debugging stage inside the delivery-flow workflow, entered by requests like "debug this failure", "why is this test failing", "find the root cause", or "this bug keeps coming back" once delivery-flow has handed off a bug. Do not activate directly for a standalone bug report that has not gone through delivery-flow first.
 ---
 
 # Systematic Debugging
@@ -111,7 +111,7 @@ You MUST complete each phase before proceeding to the next.
 
    **WHEN error is deep in call stack:**
 
-   See `root-cause-tracing.md` in this directory for the complete backward tracing technique.
+   See `references/root-cause-tracing.md` for the complete backward tracing technique.
 
    **Quick version:**
    - Where does bad value originate?
@@ -278,8 +278,8 @@ If systematic investigation reveals issue is truly environmental, timing-depende
 
 ## Supporting Techniques
 
-These techniques are part of systematic debugging and available in this directory:
+These techniques are part of systematic debugging and available in `references/`:
 
-- **`root-cause-tracing.md`** - Trace bugs backward through call stack to find original trigger
-- **`defense-in-depth.md`** - Add validation at multiple layers after finding root cause
-- **`condition-based-waiting.md`** - Replace arbitrary timeouts with condition polling
+- **`references/root-cause-tracing.md`** - Trace bugs backward through call stack to find original trigger
+- **`references/defense-in-depth.md`** - Add validation at multiple layers after finding root cause
+- **`references/condition-based-waiting.md`** - Replace arbitrary timeouts with condition polling

@@ -1,6 +1,6 @@
 ---
 name: receiving-code-review
-description: Internal review-fix stage for delivery-flow. Use when delivery-flow receives review feedback; standalone review-fix requests should enter through delivery-flow first.
+description: Evaluate code review feedback on its technical merits, verify each suggestion against the codebase, then implement the fixes that hold up and push back with reasoning on the ones that don't. This is the internal review-fix stage of the delivery-flow workflow, run when delivery-flow receives feedback from a reviewer. It is not a standalone entry point, so do not activate it directly for a one-off "address this review comment" or "respond to PR feedback" request; use delivery-flow for those instead.
 ---
 
 # Code Review Reception

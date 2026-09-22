@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Internal planning stage for delivery-flow. Use when delivery-flow identifies multiple meaningful implementation units; do not activate directly for a standalone user request or a narrow change.
+description: "Write a detailed implementation plan for a feature, spec, or ticket, breaking the work into bite-sized, testable tasks with exact file paths, code samples, and test commands an engineer can follow step by step. This is the internal planning stage of the delivery-flow workflow, run after delivery-flow splits the work into multiple meaningful implementation units. It is not a standalone entry point, so do not activate it directly for a one-off user request or a narrow change; use delivery-flow for those instead."
 ---
 
 # Writing Plans

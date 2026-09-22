@@ -1,6 +1,6 @@
 ---
 name: executing-plans
-description: Internal execution stage for delivery-flow. Use only when delivery-flow has created a written multi-step plan; do not activate directly for a standalone user request.
+description: Executes a written multi-step implementation plan end to end - loads the plan, reviews it critically for gaps, works through each task with its verification steps, and reports when everything is done. This is the execution stage inside the delivery-flow workflow, entered by requests like "implement this plan", "run the plan", "execute the plan", or "work through these tasks" once delivery-flow has produced a written plan. Do not activate directly for a standalone request that has not gone through delivery-flow first.
 ---
 
 # Executing Plans
@@ -11,7 +11,7 @@ Load plan, review critically, execute all tasks, report when complete.
 
 **Announce at start:** "I'm using the executing-plans skill to implement this plan."
 
-**Note:** This plugin deliberately uses inline execution so the complete workflow can be evaluated as one composed agent run. A review stage may still use an independent reviewer when the harness supports it.
+**Note:** Execution runs inline in this agent; use an independent reviewer for the review stage when the harness supports it.
 
 ## The Process
 
@@ -27,7 +27,7 @@ Load plan, review critically, execute all tasks, report when complete.
 For each task:
 1. Mark as in_progress
 2. Follow each step exactly (plan has bite-sized steps)
-3. Run verifications as specified
+3. Run the verification the plan names for that task (a build, test, or lint command, or a manual check) and confirm it passes before moving on
 4. Mark as completed
 
 ### Step 3: Complete Development
@@ -56,9 +56,5 @@ After all tasks complete and verified:
 **Don't force through blockers** - stop and ask.
 
 ## Remember
-- Review plan critically first
-- Follow plan steps exactly
-- Don't skip verifications
 - Reference skills when plan says to
-- Stop when blocked, don't guess
 - Never start implementation on main/master branch without explicit user consent

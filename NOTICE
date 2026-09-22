@@ -1,0 +1,19 @@
+Third-party attribution
+=======================
+
+The skills under `plugins/` are derived from Superpowers, an agentic skills
+framework by Jesse Vincent (obra), used here as a toy example of a skill set
+worth measuring.
+
+    Superpowers — https://github.com/obra/superpowers
+    Licensed under the MIT License.
+
+They have been modified for this demo: the plugins were renamed to the
+`tessleng/sdlc-*` set, the plan-output path convention was genericised, and
+references to the upstream project name were removed from prose. The skill
+instructions themselves are substantially the upstream content.
+
+Everything else in this repository — the `linkbox` toy codebase under
+`scenarios/repo/`, the eval scenarios and their rubrics, the arms files, the
+scripts, and the documentation — is original and covered by the LICENSE file
+in this directory.

@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Internal integration stage for delivery-flow. Use only after verified implementation and only when the user has authorized an integration decision; do not activate directly for a standalone request.
+description: Verify tests pass, then present the integration options for a finished branch — merge locally, push and open a pull request, or keep it as-is — execute the choice, and clean up the worktree safely. This is the internal integration stage of the delivery-flow workflow. Use it only after implementation is verified and only when the user has authorized an integration decision, for example by saying "finish this branch", "merge my work", or "open a PR" — never activate it directly for an unrelated standalone request.
 ---
 
 # Finishing a Development Branch
