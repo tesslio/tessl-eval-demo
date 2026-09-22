@@ -110,24 +110,42 @@ FOR multi-item feedback:
   4. Verify no regressions
 ```
 
-## When and How To Push Back
+## When To Push Back
 
-Push back when: the suggestion breaks existing functionality, the reviewer lacks full context, it violates YAGNI (unused feature), it's technically incorrect for this stack, legacy/compatibility reasons exist, or it conflicts with your human partner's architectural decisions.
+Push back when:
+- Suggestion breaks existing functionality
+- Reviewer lacks full context
+- Violates YAGNI (unused feature)
+- Technically incorrect for this stack
+- Legacy/compatibility reasons exist
+- Conflicts with your human partner's architectural decisions
 
-Push back by: using technical reasoning (not defensiveness), asking specific questions, referencing working tests/code, and involving your human partner if the disagreement is architectural.
+**How to push back:**
+- Use technical reasoning, not defensiveness
+- Ask specific questions
+- Reference working tests/code
+- Involve your human partner if architectural
 
 **If you're uncomfortable pushing back out loud:** Name that tension, then tell your partner about the issue you've seen. They'll appreciate your honesty.
 
 ## Acknowledging Correct Feedback
 
-When feedback IS correct, skip the Forbidden Responses above (no gratitude, no praise) and state the fix:
+When feedback IS correct:
 ```
 ✅ "Fixed. [Brief description of what changed]"
 ✅ "Good catch - [specific issue]. Fixed in [location]."
 ✅ [Just fix it and show in the code]
+
+❌ "You're absolutely right!"
+❌ "Great point!"
+❌ "Thanks for catching that!"
+❌ "Thanks for [anything]"
+❌ ANY gratitude expression
 ```
 
-**Why no thanks:** Actions speak. The code itself shows you heard the feedback.
+**Why no thanks:** Actions speak. Just fix it. The code itself shows you heard the feedback.
+
+**If you catch yourself about to write "Thanks":** DELETE IT. State the fix instead.
 
 ## Gracefully Correcting Your Pushback
 
@@ -157,6 +175,12 @@ State the correction factually and move on.
 
 ## Real Examples
 
+**Performative Agreement (Bad):**
+```
+Reviewer: "Remove legacy code"
+❌ "You're absolutely right! Let me remove that..."
+```
+
 **Technical Verification (Good):**
 ```
 Reviewer: "Remove legacy code"
@@ -169,7 +193,12 @@ Reviewer: "Implement proper metrics tracking with database, date filters, CSV ex
 ✅ "Grepped codebase - nothing calls this endpoint. Remove it (YAGNI)? Or is there usage I'm missing?"
 ```
 
-(See "Handling Unclear Feedback" above for the partial-understanding example.)
+**Unclear Item (Good):**
+```
+your human partner: "Fix items 1-6"
+You understand 1,2,3,6. Unclear on 4,5.
+✅ "Understand 1,2,3,6. Need clarification on 4 and 5 before implementing."
+```
 
 ## GitHub Thread Replies
 
