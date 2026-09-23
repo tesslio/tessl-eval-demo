@@ -1,35 +1,82 @@
 {
-  "rule": "A skill passes activation when, on every model, it loads in at least 2 of 3 runs of each scenario that lists it under load, and in at most 1 of 3 runs of each scenario that lists it under skip. Skills in neither list are not judged on that scenario.",
+  "rule": "On Sonnet, a skill passes activation when it loads in at least 2 of 3 runs of each scenario that lists it under load, and in at most 1 of 3 runs of each scenario that lists it under skip. Skills in neither list are not judged on that scenario.",
   "scenarios": {
     "linkbox-expiry-sweep": {
       "why": "Multi-unit ticket over a subtle bug, carried through planning, implementation, verification and review, with no integration asked for.",
-      "load": ["delivery-flow", "writing-plans", "executing-plans", "test-driven-development", "systematic-debugging", "verification-before-completion", "requesting-code-review"],
-      "skip": ["finishing-a-development-branch"]
+      "load": [
+        "delivery-flow",
+        "writing-plans",
+        "executing-plans",
+        "test-driven-development",
+        "systematic-debugging",
+        "verification-before-completion",
+        "requesting-code-review"
+      ],
+      "skip": [
+        "finishing-a-development-branch"
+      ]
     },
     "linkbox-namespace-isolation": {
       "why": "Same delivery shape as expiry-sweep over an easier bug.",
-      "load": ["delivery-flow", "writing-plans", "executing-plans", "test-driven-development", "systematic-debugging", "verification-before-completion", "requesting-code-review"],
-      "skip": ["finishing-a-development-branch"]
+      "load": [
+        "delivery-flow",
+        "writing-plans",
+        "executing-plans",
+        "test-driven-development",
+        "systematic-debugging",
+        "verification-before-completion",
+        "requesting-code-review"
+      ],
+      "skip": [
+        "finishing-a-development-branch"
+      ]
     },
     "linkbox-safe-handoff": {
       "why": "Narrow feature, then the user asks what their integration options are.",
-      "load": ["finishing-a-development-branch", "test-driven-development", "verification-before-completion"],
-      "skip": ["writing-plans"]
+      "load": [
+        "finishing-a-development-branch",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "skip": [
+        "writing-plans"
+      ]
     },
     "linkbox-discard-branch": {
       "why": "The user asks to throw a branch away. Nothing is built or reviewed.",
-      "load": ["finishing-a-development-branch"],
-      "skip": ["writing-plans", "executing-plans", "systematic-debugging", "requesting-code-review", "receiving-code-review"]
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": [
+        "writing-plans",
+        "executing-plans",
+        "systematic-debugging",
+        "requesting-code-review",
+        "receiving-code-review"
+      ]
     },
     "linkbox-worktree-cleanup": {
       "why": "Narrow feature in a worktree, then merge locally and clean up.",
-      "load": ["finishing-a-development-branch", "test-driven-development", "verification-before-completion"],
-      "skip": ["writing-plans", "receiving-code-review"]
+      "load": [
+        "finishing-a-development-branch",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "skip": [
+        "writing-plans",
+        "receiving-code-review"
+      ]
     },
     "linkbox-review-feedback": {
       "why": "The user hands over review comments to address. No integration asked for.",
-      "load": ["receiving-code-review", "verification-before-completion"],
-      "skip": ["writing-plans", "finishing-a-development-branch"]
+      "load": [
+        "receiving-code-review",
+        "verification-before-completion"
+      ],
+      "skip": [
+        "writing-plans",
+        "finishing-a-development-branch"
+      ]
     }
   }
 }
