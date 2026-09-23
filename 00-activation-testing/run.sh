@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Step 01: which name, description or router rule makes the model load
+# Step 00: which name, description or router rule makes the model load
 # finishing-a-development-branch when a request needs it?
 #
 #   ./run.sh screen              every arm in arms.json, on Haiku, n=2
@@ -25,7 +25,7 @@ case "${1:-}" in
       --arms-json arms.json \
       --agent claude --model claude-haiku-4-5 \
       "${SCORER[@]}" -n 2 --yes \
-      --label "eval-demo-01-screen-haiku"
+      --label "eval-demo-00-screen-haiku"
     ;;
   confirm)
     shift
@@ -37,7 +37,7 @@ case "${1:-}" in
         --arms-json "$arms" \
         --agent claude --model "$model" \
         "${SCORER[@]}" -n 3 --yes \
-        --label "eval-demo-01-confirm-${model}"
+        --label "eval-demo-00-confirm-${model}"
     done
     ;;
   *)
