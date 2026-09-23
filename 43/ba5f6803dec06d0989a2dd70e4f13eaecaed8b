@@ -1,0 +1,90 @@
+00-activation-testing/skills/finishing-a-development-branch/scenarios/no-integration/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-21
+00-activation-testing/skills/finishing-a-development-branch/scenarios/options-menu/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/push-rejected/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/run.sh
+  s_121aef358488c8::t_533bc46a2dd582 12-15,36,59-63,77
+00-activation-testing/skills/finishing-a-development-branch/scenarios/discard-branch/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-26
+00-activation-testing/skills/finishing-a-development-branch/scenarios/failing-tests/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-38
+00-activation-testing/skills/finishing-a-development-branch/scenarios/no-integration/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/options-menu/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-43
+00-activation-testing/skills/finishing-a-development-branch/scenarios/merge-worktree/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/push-rejected/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-26
+00-activation-testing/activation.py
+  s_121aef358488c8::t_533bc46a2dd582 4,26,29
+  s_121aef358488c8::t_feb156fcd9e1e3 9-10,68,115-116
+00-activation-testing/skills/finishing-a-development-branch/scenarios/explain-code/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/README.md
+  s_121aef358488c8::t_36895a44698f43 1-16
+00-activation-testing/skills/finishing-a-development-branch/scenarios/explain-code/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-21
+00-activation-testing/skills/finishing-a-development-branch/REQUIREMENTS.md
+  s_121aef358488c8::t_253c10a0218260 1-57
+00-activation-testing/skills/finishing-a-development-branch/write-scenarios.py
+  s_121aef358488c8::t_bb7e1f4c752274 1-282
+00-activation-testing/skills/finishing-a-development-branch/scenarios/detached-head/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/merge-worktree/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-26
+00-activation-testing/skills/finishing-a-development-branch/scenarios/merge-worktree/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-49
+00-activation-testing/skills/finishing-a-development-branch/scenarios/options-menu/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-26
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/src/cli.js
+  s_121aef358488c8::t_36895a44698f43 1-30
+00-activation-testing/skills/finishing-a-development-branch/scenarios/push-rejected/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-55
+00-activation-testing/skills/finishing-a-development-branch/scenarios/discard-branch/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/no-integration/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-20
+00-activation-testing/skills/finishing-a-development-branch/scenarios/failing-tests/scenario.json
+  s_121aef358488c8::t_36895a44698f43 1-5
+00-activation-testing/skills/finishing-a-development-branch/scenarios/detached-head/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-45
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/test/store.test.js
+  s_121aef358488c8::t_36895a44698f43 1-25
+00-activation-testing/skills/finishing-a-development-branch/expectations.json
+  s_121aef358488c8::t_533bc46a2dd582 1-53
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/package.json
+  s_121aef358488c8::t_36895a44698f43 1-8
+00-activation-testing/skills/finishing-a-development-branch/scenarios/failing-tests/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-21
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/test/expiry.test.js
+  s_121aef358488c8::t_36895a44698f43 1-23
+00-activation-testing/skills/finishing-a-development-branch/scenarios/explain-code/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-7
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/src/expiry.js
+  s_121aef358488c8::t_36895a44698f43 1-36
+00-activation-testing/skills/finishing-a-development-branch/scenarios/discard-branch/task.md
+  s_121aef358488c8::t_e6d4027fecd9a8 1-20
+00-activation-testing/skills/finishing-a-development-branch/scenarios/repo/src/store.js
+  s_121aef358488c8::t_36895a44698f43 1-41
+00-activation-testing/skills/finishing-a-development-branch/scenarios/detached-head/criteria.json
+  s_121aef358488c8::t_e6d4027fecd9a8 1-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "43ba5f6803dec06d0989a2dd70e4f13eaecaed8b",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
