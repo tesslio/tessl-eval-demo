@@ -2,70 +2,37 @@
   "variants": [
     {
       "id": "v00-control",
-      "hypothesis": "The skill as published at 0.1.1. Every other arm is compared with this one."
+      "hypothesis": "The skill as it was when this step started."
     },
     {
-      "id": "v01-no-internal-gate",
-      "hypothesis": "The sentences calling the skill an internal stage that must never be activated directly stop capable models from loading it.",
-      "description": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. Use it after implementation is verified, when the user asks to finish, merge, push, open a PR for, discard, or clean up a branch."
+      "id": "v01-no-verified-precondition",
+      "hypothesis": "'Use it only after implementation is verified' keeps the skill out when tests have not been run yet, although running them is the skill's own first step. Dropping the precondition lets 'merge it into main' load it.",
+      "description": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. This is the integration stage of the delivery-flow workflow. Use it when the user asks to finish, merge, push, or open a pull request for a branch, for example \"finish this branch\", \"merge my work\", or \"open a PR\". Never activate it for an unrelated standalone request."
     },
     {
-      "id": "v02-question-triggers",
-      "hypothesis": "A user asking what their options are is not read as authorizing an integration decision. Listing option questions as triggers fixes that.",
-      "description": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. This is the internal integration stage of the delivery-flow workflow. Use it only after implementation is verified, when the user asks to integrate the work or asks what their integration options are, for example \"finish this branch\", \"merge my work\", \"open a PR\", or \"what are my options for getting this merged?\". Never activate it directly for an unrelated standalone request."
+      "id": "v02-names-discard",
+      "hypothesis": "The description never mentions discarding a branch, so 'get rid of it' does not match. Naming discard and deletion as triggers fixes that.",
+      "description": "Verify tests pass, then present the integration options for a finished branch \u2014 merge locally, push and open a pull request, or keep it as-is \u2014 execute the choice, and clean up the worktree safely. This is the internal integration stage of the delivery-flow workflow. Use it only after implementation is verified and only when the user has authorized an integration decision, for example by saying \"finish this branch\", \"merge my work\", or \"open a PR\", or asks to discard or delete a branch \u2014 never activate it directly for an unrelated standalone request."
     },
     {
-      "id": "v03-intent-first",
-      "hypothesis": "Leading with what the user wants, in the user's words, matches requests better than leading with what the skill does.",
-      "description": "Use when the user wants to finish a development branch: merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree. Verifies the tests first, presents the options as the user's decision, and never destroys unmerged work or uncommitted files without explicit confirmation."
+      "id": "v03-question-triggers",
+      "hypothesis": "A question about what to do with finished work is not read as an integration request. Giving question-shaped examples fixes that.",
+      "description": "Verify tests pass, then present the integration options for a finished branch \u2014 merge locally, push and open a pull request, or keep it as-is \u2014 execute the choice, and clean up the worktree safely. This is the internal integration stage of the delivery-flow workflow. Use it only after implementation is verified and only when the user has authorized an integration decision, for example by saying \"finish this branch\", \"merge my work\", or \"open a PR\", or asks what to do with finished work, for example \"what are my options?\" or \"what should I do with this branch?\" \u2014 never activate it directly for an unrelated standalone request."
     },
     {
-      "id": "v04-one-sentence",
-      "hypothesis": "A short description is easier to match than a long, conditional one.",
-      "description": "Use when finished branch work needs to be merged, pushed as a pull request, kept, discarded, or have its worktree cleaned up."
+      "id": "v04-intent-first",
+      "hypothesis": "Leading with what the user wants, in the user's words, and covering every action the skill handles, matches all three failing requests at once.",
+      "description": "Use when the user wants to finish a development branch or asks what to do with finished work: merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree. Verifies the tests first, presents the options as the user's decision, and never destroys unmerged work or uncommitted files without explicit confirmation."
     },
     {
       "id": "v05-safety-framing",
-      "hypothesis": "Framing the skill as a guard on risky git operations makes the model load it before running them.",
+      "hypothesis": "Framing the skill as a guard on risky git operations makes the model load it before running them, whatever the wording of the request.",
       "description": "Use before any git merge into a base branch, push, pull-request creation, branch deletion, or worktree removal at the end of a piece of work. Runs the tests, presents the integration options for the user to choose, and guards against destroying unmerged commits or uncommitted files."
     },
     {
-      "id": "v06-keywords",
-      "hypothesis": "Matching is driven by vocabulary, so a description dense with the git words users type wins.",
-      "description": "Finish a git branch: merge, rebase onto main, push, open a pull request (PR), keep, discard or delete the branch, remove a git worktree, clean up after feature work. Runs the test suite first and presents merge, PR and keep options for the user to choose."
-    },
-    {
-      "id": "v07-combined",
-      "hypothesis": "User intent (v03) and safety framing (v05) together beat either alone.",
-      "description": "Use when the user wants to finish a development branch (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree) and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation."
-    },
-    {
-      "id": "v08-router-broadened",
-      "hypothesis": "The skill is fine; the router's rule for when to load it is too narrow, because it omits discarding a branch, cleaning up a worktree, and asking about options.",
-      "edits": [
-        {
-          "file": "sdlc-router/skills/delivery-flow/SKILL.md",
-          "find": "6. Load `finishing-a-development-branch` only when the user explicitly asks to integrate, push, or create a pull request. Otherwise leave a reviewed, PR-ready local change.",
-          "replace": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
-        }
-      ]
-    },
-    {
-      "id": "v09-rename",
-      "hypothesis": "The name describes a process step, not a request. A name closer to what users ask for is matched more often.",
-      "rename": "integrating-a-branch"
-    },
-    {
-      "id": "v10-combined-router",
-      "hypothesis": "The best description and the broadened router rule fix different causes, so both together beat either alone.",
-      "description": "Use when the user wants to finish a development branch (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree) and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation.",
-      "edits": [
-        {
-          "file": "sdlc-router/skills/delivery-flow/SKILL.md",
-          "find": "6. Load `finishing-a-development-branch` only when the user explicitly asks to integrate, push, or create a pull request. Otherwise leave a reviewed, PR-ready local change.",
-          "replace": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
-        }
-      ]
+      "id": "v06-intent-and-safety",
+      "hypothesis": "v04 and v05 reach the same requests from two sides; together they cover more than either alone.",
+      "description": "Use when the user wants to finish a development branch or asks what to do with finished work (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree), and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation."
     }
   ]
 }

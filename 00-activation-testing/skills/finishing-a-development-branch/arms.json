@@ -19,7 +19,7 @@
     }
   },
   {
-    "label": "v01-no-internal-gate",
+    "label": "v01-no-verified-precondition",
     "includeContext": true,
     "forceContextActivation": true,
     "fixtures": {
@@ -30,7 +30,7 @@
         "localPath": "./before/plugins/sdlc-implementation"
       },
       "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v01-no-internal-gate/sdlc-assurance"
+        "localPath": "./skills/finishing-a-development-branch/variants/v01-no-verified-precondition/sdlc-assurance"
       },
       "router": {
         "localPath": "./before/plugins/sdlc-router"
@@ -38,7 +38,7 @@
     }
   },
   {
-    "label": "v02-question-triggers",
+    "label": "v02-names-discard",
     "includeContext": true,
     "forceContextActivation": true,
     "fixtures": {
@@ -49,7 +49,7 @@
         "localPath": "./before/plugins/sdlc-implementation"
       },
       "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v02-question-triggers/sdlc-assurance"
+        "localPath": "./skills/finishing-a-development-branch/variants/v02-names-discard/sdlc-assurance"
       },
       "router": {
         "localPath": "./before/plugins/sdlc-router"
@@ -57,7 +57,7 @@
     }
   },
   {
-    "label": "v03-intent-first",
+    "label": "v03-question-triggers",
     "includeContext": true,
     "forceContextActivation": true,
     "fixtures": {
@@ -68,7 +68,7 @@
         "localPath": "./before/plugins/sdlc-implementation"
       },
       "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v03-intent-first/sdlc-assurance"
+        "localPath": "./skills/finishing-a-development-branch/variants/v03-question-triggers/sdlc-assurance"
       },
       "router": {
         "localPath": "./before/plugins/sdlc-router"
@@ -76,7 +76,7 @@
     }
   },
   {
-    "label": "v04-one-sentence",
+    "label": "v04-intent-first",
     "includeContext": true,
     "forceContextActivation": true,
     "fixtures": {
@@ -87,7 +87,7 @@
         "localPath": "./before/plugins/sdlc-implementation"
       },
       "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v04-one-sentence/sdlc-assurance"
+        "localPath": "./skills/finishing-a-development-branch/variants/v04-intent-first/sdlc-assurance"
       },
       "router": {
         "localPath": "./before/plugins/sdlc-router"
@@ -114,7 +114,7 @@
     }
   },
   {
-    "label": "v06-keywords",
+    "label": "v06-intent-and-safety",
     "includeContext": true,
     "forceContextActivation": true,
     "fixtures": {
@@ -125,86 +125,10 @@
         "localPath": "./before/plugins/sdlc-implementation"
       },
       "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v06-keywords/sdlc-assurance"
+        "localPath": "./skills/finishing-a-development-branch/variants/v06-intent-and-safety/sdlc-assurance"
       },
       "router": {
         "localPath": "./before/plugins/sdlc-router"
-      }
-    }
-  },
-  {
-    "label": "v07-combined",
-    "includeContext": true,
-    "forceContextActivation": true,
-    "fixtures": {
-      "planning": {
-        "localPath": "./before/plugins/sdlc-planning"
-      },
-      "implementation": {
-        "localPath": "./before/plugins/sdlc-implementation"
-      },
-      "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v07-combined/sdlc-assurance"
-      },
-      "router": {
-        "localPath": "./before/plugins/sdlc-router"
-      }
-    }
-  },
-  {
-    "label": "v08-router-broadened",
-    "includeContext": true,
-    "forceContextActivation": true,
-    "fixtures": {
-      "planning": {
-        "localPath": "./before/plugins/sdlc-planning"
-      },
-      "implementation": {
-        "localPath": "./before/plugins/sdlc-implementation"
-      },
-      "assurance": {
-        "localPath": "./before/plugins/sdlc-assurance"
-      },
-      "router": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v08-router-broadened/sdlc-router"
-      }
-    }
-  },
-  {
-    "label": "v09-rename",
-    "includeContext": true,
-    "forceContextActivation": true,
-    "fixtures": {
-      "planning": {
-        "localPath": "./before/plugins/sdlc-planning"
-      },
-      "implementation": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v09-rename/sdlc-implementation"
-      },
-      "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v09-rename/sdlc-assurance"
-      },
-      "router": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v09-rename/sdlc-router"
-      }
-    }
-  },
-  {
-    "label": "v10-combined-router",
-    "includeContext": true,
-    "forceContextActivation": true,
-    "fixtures": {
-      "planning": {
-        "localPath": "./before/plugins/sdlc-planning"
-      },
-      "implementation": {
-        "localPath": "./before/plugins/sdlc-implementation"
-      },
-      "assurance": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v10-combined-router/sdlc-assurance"
-      },
-      "router": {
-        "localPath": "./skills/finishing-a-development-branch/variants/v10-combined-router/sdlc-router"
       }
     }
   }

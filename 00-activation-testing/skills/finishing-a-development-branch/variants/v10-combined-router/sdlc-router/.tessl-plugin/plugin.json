@@ -1,7 +1,0 @@
-{
-  "name": "tessleng/sdlc-router",
-  "version": "0.1.1",
-  "description": "A lightweight router that composes planning, implementation, debugging, verification, review, and handoff skills into one delivery workflow.",
-  "private": false,
-  "skills": "./skills"
-}
