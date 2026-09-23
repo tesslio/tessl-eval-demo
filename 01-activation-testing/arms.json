@@ -1,0 +1,211 @@
+[
+  {
+    "label": "v00-control",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./before/plugins/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v01-no-internal-gate",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v01-no-internal-gate/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v02-question-triggers",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v02-question-triggers/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v03-intent-first",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v03-intent-first/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v04-one-sentence",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v04-one-sentence/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v05-safety-framing",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v05-safety-framing/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v06-keywords",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v06-keywords/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v07-combined",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v07-combined/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v08-router-broadened",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./before/plugins/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./variants/v08-router-broadened/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v09-rename",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./variants/v09-rename/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v09-rename/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./variants/v09-rename/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "v10-combined-router",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./variants/v10-combined-router/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./variants/v10-combined-router/sdlc-router"
+      }
+    }
+  }
+]

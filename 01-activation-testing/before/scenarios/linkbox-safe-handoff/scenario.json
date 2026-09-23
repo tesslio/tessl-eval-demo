@@ -1,0 +1,5 @@
+{
+  "fixtures": {
+    "codebase": { "type": "directory", "path": "../repo", "installPath": "." }
+  }
+}
