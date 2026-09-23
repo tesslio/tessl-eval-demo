@@ -1,0 +1,22 @@
+README.md
+  s_121aef358488c8::t_0e6179d2ccc1ff 48-50
+  s_121aef358488c8::t_a86cda30f192ab 25-26,33-47,51
+run.sh
+  s_121aef358488c8::t_87d43837673a9e 4-6,9-20,25-35,37-46,48-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4b802bb47f2489f12fa5ee95f24e3c95e00eec58",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
