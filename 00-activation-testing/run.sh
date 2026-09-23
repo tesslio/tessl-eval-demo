@@ -24,7 +24,25 @@
 #
 # Run ./make-variants.py <dir> before screening.
 set -euo pipefail
+CALLER_DIR=$PWD
 cd "$(dirname "$0")"
+STEP_DIR=$PWD
+
+# An experiment directory may be given relative to wherever run.sh was
+# called from, or relative to this step. Resolve it to a path relative to
+# this step, and stop if it does not exist, so a mistyped path can never
+# fall back to running some other set of scenarios.
+experiment_dir() {
+  local given=${1%/} resolved
+  if [ -d "$CALLER_DIR/$given" ]; then resolved=$(cd "$CALLER_DIR/$given" && pwd)
+  elif [ -d "$STEP_DIR/$given" ]; then resolved=$(cd "$STEP_DIR/$given" && pwd)
+  else echo "No experiment directory $given" >&2; exit 2
+  fi
+  case "$resolved" in
+    "$STEP_DIR"/*) echo "${resolved#"$STEP_DIR"/}" ;;
+    *) echo "$given is not inside $STEP_DIR" >&2; exit 2 ;;
+  esac
+}
 
 MODEL=claude-sonnet-4-6
 SCORER=(--scorer-agent claude --scorer-model claude-opus-4-6)
@@ -58,15 +76,15 @@ case "${1:-}" in
     ;;
   baseline)
     # The unchanged plugins on one skill's own scenarios, n=3.
-    dir=${2:?experiment directory}; dir=${dir%/}
+    dir=$(experiment_dir "${2:?experiment directory}")
     run "$(scenarios_for "$dir")" arms-control.json 3 "eval-demo-00-baseline-$(basename "$dir")"
     ;;
   screen)
-    dir=${2:?experiment directory}; dir=${dir%/}
+    dir=$(experiment_dir "${2:?experiment directory}")
     run "$(scenarios_for "$dir")" "$dir/arms.json" 2 "eval-demo-00-screen-$(basename "$dir")"
     ;;
   confirm)
-    dir=${2:?experiment directory}; dir=${dir%/}; shift 2
+    dir=$(experiment_dir "${2:?experiment directory}"); shift 2
     [ $# -gt 0 ] || { echo "confirm needs at least one arm label" >&2; exit 2; }
     control=$(jq -r '.[0].label' "$dir/arms.json")
     keep=$(printf '%s\n' "$control" "$@" | jq -R . | jq -s .)
