@@ -51,5 +51,6 @@ the score: a variant can raise activation without changing the score, and
 in this step activation is the result being measured.
 
 `forceContextActivation` is on in every arm, as in the rest of this repo.
-It tells the agent to use the installed plugins, not which skill to load,
-so the choice of skill is still the agent's.
+It adds one fixed line to the prompt, saying that skills are available and
+must be used if needed. It names no skill, so which skill loads is still
+the agent's choice, and that choice is what this step measures.
