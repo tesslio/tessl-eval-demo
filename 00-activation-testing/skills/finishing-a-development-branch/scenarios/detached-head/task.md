@@ -3,5 +3,6 @@
 I'm done with the work in `.worktrees/count-codes`. What should I do with
 it? Give me my options.
 
-When you are done, write what you would say to me in `REPLY.md` at the
-repo root. Do not commit it.
+Before you end your turn, write what you are saying to me in `REPLY.md`
+at the repo root, including any question you want me to answer. Do not
+commit it.
