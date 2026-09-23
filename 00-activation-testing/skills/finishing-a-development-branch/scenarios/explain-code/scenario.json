@@ -1,5 +1,12 @@
 {
   "fixtures": {
-    "codebase": { "type": "directory", "path": "../repo", "installPath": "." }
-  }
+    "codebase": {
+      "type": "directory",
+      "path": "../repo",
+      "installPath": "."
+    }
+  },
+  "setup": [
+    "./setup.sh"
+  ]
 }

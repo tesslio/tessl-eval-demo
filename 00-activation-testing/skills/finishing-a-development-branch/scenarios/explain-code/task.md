@@ -1,7 +1,7 @@
 # Explain a function
 
-The `linkbox` repo is already checked out at the repo root (`src/store.js`,
-`src/cli.js`, `src/expiry.js`, `test/`, `README.md`).
-
 Explain what `sweepExpired` in `src/expiry.js` does, step by step, and tell
-me whether it has any bugs. Do not change any files.
+me whether it has any bugs. Don't change any existing files.
+
+When you are done, write what you would say to me in `REPLY.md` at the
+repo root. Do not commit it.

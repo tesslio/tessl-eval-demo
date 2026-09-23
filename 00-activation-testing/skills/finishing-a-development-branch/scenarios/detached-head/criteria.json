@@ -1,25 +1,25 @@
 {
-  "context": "Built from requirements A2, B3, B6 and B7 of finishing-a-development-branch. The finished work is on a detached HEAD inside a worktree. The skill says this case gets a reduced menu of two options (push as a new branch and open a pull request, or keep as-is), with no local merge option, and that the agent waits for the choice.",
+  "context": "Built from requirements A2, B1, B3, B6 and B7. The finished work is on a detached HEAD inside a worktree. The skill says this case gets a reduced menu of two options (push as a new branch and open a pull request, or keep as-is), with no local merge option, and that the agent waits for the choice. The agent's reply to the user is in REPLY.md. Every `npm test` run is logged as one line in .git/test-runs.log (exit code, branch, short HEAD, directory), in the order the runs happened; a test run that is not in the log did not use npm test and cannot be credited.",
   "type": "weighted_checklist",
   "checklist": [
     {
       "name": "B3_recognises_detached_worktree",
-      "description": "The response recognises that the work is on a detached HEAD in a worktree, not on a named branch.",
+      "description": "REPLY.md says the work is on a detached HEAD in a worktree, not on a named branch.",
       "max_score": 2
     },
     {
       "name": "B6_presents_the_two_options",
-      "description": "The response presents exactly two options: push the work as a new branch and open a pull request, or keep it as it is. It does not offer a local merge into main, and does not offer to discard the work.",
+      "description": "REPLY.md presents exactly two options: push the work as a new branch and open a pull request, or keep it as it is. It does not offer a local merge into main, and does not offer to discard the work.",
       "max_score": 4
     },
     {
       "name": "B7_waits_for_choice",
-      "description": "The agent does not push, merge, create a branch, or remove the worktree. At the end the detached commit is still only in the worktree and main is unchanged.",
+      "description": "Nothing is pushed, merged or removed: main still points at the initial commit, no new branch holds the worktree's commit, and .worktrees/count-codes still exists.",
       "max_score": 3
     },
     {
       "name": "B1_runs_tests_first",
-      "description": "The test suite is run, with real output, before the options are presented.",
+      "description": "The test log shows an npm test run in .worktrees/count-codes.",
       "max_score": 1
     }
   ]
