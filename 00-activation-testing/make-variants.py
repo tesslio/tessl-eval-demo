@@ -1,43 +1,47 @@
 #!/usr/bin/env python3
-"""Build one plugin set per variant in variants.json, and the arms that run them.
+"""Build the variant plugins and the arms for one skill.
 
-Each variant changes as little as possible: only the plugins it edits are
-copied into variants/<id>/, and its arm points every other plugin at the
-unchanged copy in before/plugins. The control arm points everything at
-before/plugins. Every arm uploads local plugins, never published ones, so
-all arms are packed the same way and differ only in the edited text.
+    ./make-variants.py <skill>
 
-Run it again after editing variants.json. It rewrites variants/ and arms.json.
+Reads skills/<skill>/variants.json and writes skills/<skill>/variants/ and
+skills/<skill>/arms.json. A variant may change the skill's description,
+rename the skill, or make exact text edits to any plugin file.
+
+Each variant copies only the plugins it edits. Its arm points every other
+plugin at the unchanged copy in before/plugins, so an arm differs from the
+control only in the edited text. Every arm uploads local plugins, never
+published ones, so all arms are packed the same way.
+
+Run it again after editing variants.json. It rewrites the outputs.
 """
 import json
 import re
 import shutil
+import sys
 from pathlib import Path
 
 STEP = Path(__file__).resolve().parent
 BEFORE = STEP / "before" / "plugins"
-VARIANTS = STEP / "variants"
-PLUGINS = {
+FIXTURES = {
     "planning": "sdlc-planning",
     "implementation": "sdlc-implementation",
     "assurance": "sdlc-assurance",
     "router": "sdlc-router",
 }
-ROUTER_SKILL = "sdlc-router/skills/delivery-flow/SKILL.md"
-ROUTER_RULE = re.compile(r"^6\. Load `finishing-a-development-branch`.*$", re.M)
 
 
-def main():
-    spec = json.loads((STEP / "variants.json").read_text())
-    shutil.rmtree(VARIANTS, ignore_errors=True)
-    arms = [build_variant(spec["skill"], variant) for variant in spec["variants"]]
-    (STEP / "arms.json").write_text(json.dumps(arms, indent=2) + "\n")
-    print(f"{len(arms)} arms written to arms.json")
+def main(skill):
+    skill_dir = STEP / "skills" / skill
+    spec = json.loads((skill_dir / "variants.json").read_text())
+    shutil.rmtree(skill_dir / "variants", ignore_errors=True)
+    arms = [build_variant(skill, skill_dir / "variants", v) for v in spec["variants"]]
+    (skill_dir / "arms.json").write_text(json.dumps(arms, indent=2) + "\n")
+    print(f"{skill}: {len(arms)} arms written to {skill_dir.relative_to(STEP)}/arms.json")
 
 
-def build_variant(skill, variant):
+def build_variant(skill, variants_root, variant):
+    root = variants_root / variant["id"]
     edited = set()
-    root = VARIANTS / variant["id"]
 
     def copy_of(plugin):
         if plugin not in edited:
@@ -46,22 +50,34 @@ def build_variant(skill, variant):
         return root / plugin
 
     if "description" in variant:
-        skill_md = copy_of("sdlc-assurance") / "skills" / skill / "SKILL.md"
-        replace_description(skill_md, variant["description"])
+        plugin = plugin_holding(skill)
+        replace_description(copy_of(plugin) / "skills" / skill / "SKILL.md", variant["description"])
 
-    if "routerRule" in variant:
-        router_md = copy_of("sdlc-router").parent / ROUTER_SKILL
-        text, count = ROUTER_RULE.subn(variant["routerRule"], router_md.read_text())
-        assert count == 1, f"{variant['id']}: router rule not found"
-        router_md.write_text(text)
+    for edit in variant.get("edits", []):
+        plugin, _, rest = edit["file"].partition("/")
+        target = copy_of(plugin) / rest
+        text = target.read_text()
+        assert text.count(edit["find"]) == 1, f"{variant['id']}: edit text not found once in {edit['file']}"
+        target.write_text(text.replace(edit["find"], edit["replace"]))
 
     if "rename" in variant:
-        # The name appears in the skill itself, the router and executing-plans,
-        # so a rename that missed one of them would test a broken dispatch.
-        for plugin in ("sdlc-assurance", "sdlc-router", "sdlc-implementation"):
+        # A rename that missed any file naming the skill would test a broken
+        # dispatch, not a better name, so every plugin that mentions it is copied.
+        for plugin in plugins_mentioning(skill):
             rename_skill(copy_of(plugin), skill, variant["rename"])
 
     return arm(variant["id"], root, edited)
+
+
+def plugin_holding(skill):
+    matches = [p.name for p in BEFORE.iterdir() if (p / "skills" / skill).is_dir()]
+    assert len(matches) == 1, f"{skill}: expected in one plugin, found {matches}"
+    return matches[0]
+
+
+def plugins_mentioning(skill):
+    return [p.name for p in BEFORE.iterdir()
+            if any(skill in md.read_text() for md in p.rglob("*.md"))]
 
 
 def replace_description(skill_md, description):
@@ -88,7 +104,7 @@ def rename_skill(plugin_dir, old_name, new_name):
 
 def arm(label, variant_root, edited):
     fixtures = {}
-    for fixture_name, plugin in PLUGINS.items():
+    for fixture_name, plugin in FIXTURES.items():
         source = variant_root / plugin if plugin in edited else BEFORE / plugin
         fixtures[fixture_name] = {"localPath": "./" + str(source.relative_to(STEP))}
     return {
@@ -100,4 +116,6 @@ def arm(label, variant_root, edited):
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 2:
+        sys.exit("usage: make-variants.py <skill>")
+    main(sys.argv[1])

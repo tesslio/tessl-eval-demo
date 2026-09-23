@@ -1,0 +1,21 @@
+[
+  {
+    "label": "control",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./before/plugins/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  }
+]

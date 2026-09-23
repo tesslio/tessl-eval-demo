@@ -1,5 +1,4 @@
 {
-  "skill": "finishing-a-development-branch",
   "variants": [
     {
       "id": "v00-control",
@@ -43,7 +42,13 @@
     {
       "id": "v08-router-broadened",
       "hypothesis": "The skill is fine; the router's rule for when to load it is too narrow, because it omits discarding a branch, cleaning up a worktree, and asking about options.",
-      "routerRule": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
+      "edits": [
+        {
+          "file": "sdlc-router/skills/delivery-flow/SKILL.md",
+          "find": "6. Load `finishing-a-development-branch` only when the user explicitly asks to integrate, push, or create a pull request. Otherwise leave a reviewed, PR-ready local change.",
+          "replace": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
+        }
+      ]
     },
     {
       "id": "v09-rename",
@@ -54,7 +59,13 @@
       "id": "v10-combined-router",
       "hypothesis": "The best description and the broadened router rule fix different causes, so both together beat either alone.",
       "description": "Use when the user wants to finish a development branch (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree) and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation.",
-      "routerRule": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
+      "edits": [
+        {
+          "file": "sdlc-router/skills/delivery-flow/SKILL.md",
+          "find": "6. Load `finishing-a-development-branch` only when the user explicitly asks to integrate, push, or create a pull request. Otherwise leave a reviewed, PR-ready local change.",
+          "replace": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
+        }
+      ]
     }
   ]
 }

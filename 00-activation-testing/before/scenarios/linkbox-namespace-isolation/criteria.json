@@ -1,0 +1,36 @@
+{
+  "context": "Tests the full delivery loop (plan, implement, verify, review, safe handoff) on a multi-unit ticket, where the codebase has a real, undetected bug: a module-level map keyed only by URL and shared across every namespace.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "finds_and_fixes_isolation_bug",
+      "description": "The agent identifies that `codesByUrl` in src/store.js is a module-level map keyed only by URL and therefore shared across every namespace rather than scoped per namespace, demonstrates this with a concrete case of the same URL shortened under two different namespaces returning the same code, and fixes it (e.g. keys stored codes by namespace, or moves the map inside the factory).",
+      "max_score": 3
+    },
+    {
+      "name": "continuous_composed_flow",
+      "description": "The solution artifacts show planning, implementation, verification, review, and handoff as one connected workflow rather than unrelated suggestions or a pause for a routine process choice.",
+      "max_score": 2
+    },
+    {
+      "name": "test_coverage_per_unit",
+      "description": "Automated tests exist for namespace isolation in the store in isolation (including that the same URL under two namespaces gets different codes), for the distinct-code counting logic, and for the stats command's output, each independently, with real command output shown.",
+      "max_score": 2
+    },
+    {
+      "name": "review_and_fix_loop",
+      "description": "Includes evidence that the final diff was reviewed against the ticket's requirements \u2014 not merely that tests pass. Award the point either when the review produced findings and those were fixed and re-verified with fresh command output, or when the review is shown to have been carried out and explicitly concluded there was nothing to fix. Award nothing when no review of the diff is evidenced at all.",
+      "max_score": 1
+    },
+    {
+      "name": "safe_handoff",
+      "description": "Leaves runnable source, tests, and a PR-ready local change without pushing, merging, or creating a real pull request. The pre-existing tests in test/store.test.js still pass.",
+      "max_score": 1
+    },
+    {
+      "name": "no_third_party_deps",
+      "description": "The implementation uses only Node built-ins.",
+      "max_score": 1
+    }
+  ]
+}

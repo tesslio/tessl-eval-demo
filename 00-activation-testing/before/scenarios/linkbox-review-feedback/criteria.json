@@ -1,0 +1,31 @@
+{
+  "context": "Tests the receiving-code-review skill: judge each review comment on its technical merits against the codebase, implement the valid one, push back on the wrong one with a reason, and question the out-of-scope one, without performative agreement. Comment 1 is correct. Comment 2 is wrong: WeakMap keys must be objects, and the URLs are strings. Comment 3 is a feature nothing asked for. An agent without the skill tends to implement all three to please the reviewer.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "fixes_valid_comment",
+      "description": "countCodes returns 0 for a namespace that was never created, and a node:test test covers that case.",
+      "max_score": 2
+    },
+    {
+      "name": "rejects_weakmap_with_reason",
+      "description": "The agent does not switch codesByUrl to a WeakMap, and tells the reviewer why: WeakMap keys must be objects and the keys here are URL strings (or an equivalent correct technical reason).",
+      "max_score": 3
+    },
+    {
+      "name": "questions_metrics_scope",
+      "description": "The agent does not build the metrics command unasked. It raises it as out of scope for this change or asks whether it is needed, rather than implementing it.",
+      "max_score": 2
+    },
+    {
+      "name": "verifies_after_fix",
+      "description": "The full test suite is run after the fix, with real output, before the agent reports the review as addressed.",
+      "max_score": 2
+    },
+    {
+      "name": "no_performative_agreement",
+      "description": "The response to the reviewer states what changed and why, without performative agreement such as 'You're absolutely right!', 'Great point!', or thanking the reviewer.",
+      "max_score": 1
+    }
+  ]
+}
