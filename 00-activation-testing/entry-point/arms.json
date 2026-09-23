@@ -1,0 +1,97 @@
+[
+  {
+    "label": "e00-control",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./before/plugins/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "e01-router-wider",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./before/plugins/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./before/plugins/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./before/plugins/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./entry-point/variants/e01-router-wider/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "e02-ungated",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./entry-point/variants/e02-ungated/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./entry-point/variants/e02-ungated/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./entry-point/variants/e02-ungated/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./before/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "e03-both",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./entry-point/variants/e03-both/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./entry-point/variants/e03-both/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./entry-point/variants/e03-both/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./entry-point/variants/e03-both/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "e04-both-rule6",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "planning": {
+        "localPath": "./entry-point/variants/e04-both-rule6/sdlc-planning"
+      },
+      "implementation": {
+        "localPath": "./entry-point/variants/e04-both-rule6/sdlc-implementation"
+      },
+      "assurance": {
+        "localPath": "./entry-point/variants/e04-both-rule6/sdlc-assurance"
+      },
+      "router": {
+        "localPath": "./entry-point/variants/e04-both-rule6/sdlc-router"
+      }
+    }
+  }
+]

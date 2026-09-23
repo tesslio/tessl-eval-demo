@@ -1,0 +1,66 @@
+{
+  "variants": [
+    {
+      "id": "e00-control",
+      "hypothesis": "The plugins as they were when this step started."
+    },
+    {
+      "id": "e01-router-wider",
+      "hypothesis": "Requests that are not a full ticket-to-PR delivery never match the router, and the stage skills forbid loading directly, so nothing loads. Widening the router's description gives those requests an entry point.",
+      "descriptions": {
+        "delivery-flow": "Use for any software engineering task in a repository: implementing a ticket, fixing a bug, addressing review feedback, or finishing, merging, discarding or cleaning up a branch. Routes the work through the planning, implementation, debugging, verification, review and integration skills."
+      }
+    },
+    {
+      "id": "e02-ungated",
+      "hypothesis": "The 'do not activate directly, use delivery-flow' clause in every stage skill stops it loading on a request it fits. Replacing the clause with a plain trigger lets each skill load on its own.",
+      "descriptions": {
+        "finishing-a-development-branch": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. Use it when the user asks to finish, merge, push, open a pull request for, discard, or clean up a branch or worktree.",
+        "receiving-code-review": "Evaluate code review feedback on its technical merits, verify each suggestion against the codebase, then implement the fixes that hold up and push back with reasoning on the ones that don't. Use it whenever review comments or pull request feedback need addressing.",
+        "requesting-code-review": "Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use it after implementing and verifying a change and before merging, or when the user asks for a review of their code.",
+        "verification-before-completion": "Run the commands that prove a change works, and read their output, before claiming work is complete, fixed, or passing. Use it before any completion claim, commit, merge, or report that tests pass.",
+        "executing-plans": "Executes a written multi-step implementation plan end to end - loads the plan, reviews it critically for gaps, works through each task with its verification steps, and reports when everything is done. Use it for requests like \"implement this plan\", \"run the plan\", \"execute the plan\", or \"work through these tasks\".",
+        "systematic-debugging": "Investigates a test failure, bug, or unexpected behavior to find its root cause before proposing any fix - reproduce the issue, trace the data flow, form and test one hypothesis at a time, then implement and verify the fix. Use it for requests like \"debug this failure\", \"why is this test failing\", \"find the root cause\", or when code may not do what it claims.",
+        "test-driven-development": "Implements a feature or bug fix test-first - write one failing test, watch it fail, write the minimal code to pass, then refactor with tests green. Use it for requests like \"implement this feature\", \"fix this bug\", \"write the code for this\", or \"add the tests and implement it\".",
+        "writing-plans": "Write a detailed implementation plan for a feature, spec, or ticket, breaking the work into bite-sized, testable tasks with exact file paths, code samples, and test commands an engineer can follow step by step. Use it when a task spans multiple meaningful implementation units; for a narrow change, a short working plan is enough."
+      }
+    },
+    {
+      "id": "e03-both",
+      "hypothesis": "e01 and e02 fix the same gap from two sides; together they cover requests either alone misses.",
+      "descriptions": {
+        "finishing-a-development-branch": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. Use it when the user asks to finish, merge, push, open a pull request for, discard, or clean up a branch or worktree.",
+        "receiving-code-review": "Evaluate code review feedback on its technical merits, verify each suggestion against the codebase, then implement the fixes that hold up and push back with reasoning on the ones that don't. Use it whenever review comments or pull request feedback need addressing.",
+        "requesting-code-review": "Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use it after implementing and verifying a change and before merging, or when the user asks for a review of their code.",
+        "verification-before-completion": "Run the commands that prove a change works, and read their output, before claiming work is complete, fixed, or passing. Use it before any completion claim, commit, merge, or report that tests pass.",
+        "executing-plans": "Executes a written multi-step implementation plan end to end - loads the plan, reviews it critically for gaps, works through each task with its verification steps, and reports when everything is done. Use it for requests like \"implement this plan\", \"run the plan\", \"execute the plan\", or \"work through these tasks\".",
+        "systematic-debugging": "Investigates a test failure, bug, or unexpected behavior to find its root cause before proposing any fix - reproduce the issue, trace the data flow, form and test one hypothesis at a time, then implement and verify the fix. Use it for requests like \"debug this failure\", \"why is this test failing\", \"find the root cause\", or when code may not do what it claims.",
+        "test-driven-development": "Implements a feature or bug fix test-first - write one failing test, watch it fail, write the minimal code to pass, then refactor with tests green. Use it for requests like \"implement this feature\", \"fix this bug\", \"write the code for this\", or \"add the tests and implement it\".",
+        "writing-plans": "Write a detailed implementation plan for a feature, spec, or ticket, breaking the work into bite-sized, testable tasks with exact file paths, code samples, and test commands an engineer can follow step by step. Use it when a task spans multiple meaningful implementation units; for a narrow change, a short working plan is enough.",
+        "delivery-flow": "Use for any software engineering task in a repository: implementing a ticket, fixing a bug, addressing review feedback, or finishing, merging, discarding or cleaning up a branch. Routes the work through the planning, implementation, debugging, verification, review and integration skills."
+      }
+    },
+    {
+      "id": "e04-both-rule6",
+      "hypothesis": "With the router loading, its rule 6 still keeps finishing-a-development-branch out of discard, clean-up and options requests. Widening that rule completes e03.",
+      "descriptions": {
+        "finishing-a-development-branch": "Verify tests pass, then present the integration options for a finished branch (merge locally, push and open a pull request, or keep it as-is), execute the choice, and clean up the worktree safely. Use it when the user asks to finish, merge, push, open a pull request for, discard, or clean up a branch or worktree.",
+        "receiving-code-review": "Evaluate code review feedback on its technical merits, verify each suggestion against the codebase, then implement the fixes that hold up and push back with reasoning on the ones that don't. Use it whenever review comments or pull request feedback need addressing.",
+        "requesting-code-review": "Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use it after implementing and verifying a change and before merging, or when the user asks for a review of their code.",
+        "verification-before-completion": "Run the commands that prove a change works, and read their output, before claiming work is complete, fixed, or passing. Use it before any completion claim, commit, merge, or report that tests pass.",
+        "executing-plans": "Executes a written multi-step implementation plan end to end - loads the plan, reviews it critically for gaps, works through each task with its verification steps, and reports when everything is done. Use it for requests like \"implement this plan\", \"run the plan\", \"execute the plan\", or \"work through these tasks\".",
+        "systematic-debugging": "Investigates a test failure, bug, or unexpected behavior to find its root cause before proposing any fix - reproduce the issue, trace the data flow, form and test one hypothesis at a time, then implement and verify the fix. Use it for requests like \"debug this failure\", \"why is this test failing\", \"find the root cause\", or when code may not do what it claims.",
+        "test-driven-development": "Implements a feature or bug fix test-first - write one failing test, watch it fail, write the minimal code to pass, then refactor with tests green. Use it for requests like \"implement this feature\", \"fix this bug\", \"write the code for this\", or \"add the tests and implement it\".",
+        "writing-plans": "Write a detailed implementation plan for a feature, spec, or ticket, breaking the work into bite-sized, testable tasks with exact file paths, code samples, and test commands an engineer can follow step by step. Use it when a task spans multiple meaningful implementation units; for a narrow change, a short working plan is enough.",
+        "delivery-flow": "Use for any software engineering task in a repository: implementing a ticket, fixing a bug, addressing review feedback, or finishing, merging, discarding or cleaning up a branch. Routes the work through the planning, implementation, debugging, verification, review and integration skills."
+      },
+      "edits": [
+        {
+          "file": "sdlc-router/skills/delivery-flow/SKILL.md",
+          "find": "6. Load `finishing-a-development-branch` only when the user explicitly asks to integrate, push, or create a pull request. Otherwise leave a reviewed, PR-ready local change.",
+          "replace": "6. Load `finishing-a-development-branch` whenever the user asks to integrate, merge, push, or open a pull request, to discard a branch, or to clean up a worktree, or asks what their options are for any of these. Otherwise leave a reviewed, PR-ready local change."
+        }
+      ]
+    }
+  ]
+}

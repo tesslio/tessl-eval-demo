@@ -1,0 +1,7 @@
+{
+  "name": "tessleng/sdlc-assurance",
+  "version": "0.1.1",
+  "description": "Assurance guidance for verification, technical review, review fixes, and safe delivery handoff.",
+  "private": false,
+  "skills": "./skills"
+}

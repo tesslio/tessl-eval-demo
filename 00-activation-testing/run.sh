@@ -9,23 +9,29 @@
 #       The unchanged plugins on every scenario, n=3. Tells you which
 #       skills fail the rule. 6 scenarios x 3 = 18 cells.
 #
-#   ./run.sh screen <skill>
-#       Every arm in skills/<skill>/arms.json, n=2, over only the
-#       scenarios that judge that skill.
+#   ./run.sh screen <dir>
+#       Every arm in <dir>/arms.json, n=2. For skills/<skill>, only the
+#       scenarios that judge that skill; for a bundle-level experiment such
+#       as entry-point, every scenario.
 #
-#   ./run.sh confirm <skill> <arm>...
-#       The named arms plus the control, n=3, over the scenarios that
-#       judge that skill.
+#   ./run.sh confirm <dir> <arm>...
+#       The named arms plus the control (the first arm), n=3, over the
+#       same scenarios.
 #
-# Run ./make-variants.py <skill> before screening a skill.
+# Run ./make-variants.py <dir> before screening.
 set -euo pipefail
 cd "$(dirname "$0")"
 
 MODEL=claude-sonnet-4-6
 SCORER=(--scorer-agent claude --scorer-model claude-opus-4-6)
 
-# The scenarios that list <skill> under load or skip, copied with the
-# codebase they install, because a run takes one scenarios directory.
+# The scenarios an experiment is judged on. For one skill, those that list
+# it under load or skip, copied with the codebase they install, because a
+# run takes one scenarios directory.
+scenarios_for() {
+  case "$1" in skills/*) scenarios_judging "${1#skills/}" ;; *) echo before/scenarios ;; esac
+}
+
 scenarios_judging() {
   local skill=$1 out=".run/$1/scenarios"
   rm -rf "$out" && mkdir -p "$out"
@@ -46,18 +52,19 @@ case "${1:-}" in
     run before/scenarios arms-control.json 3 "eval-demo-00-triage"
     ;;
   screen)
-    skill=${2:?skill}
-    run "$(scenarios_judging "$skill")" "skills/$skill/arms.json" 2 "eval-demo-00-screen-${skill}"
+    dir=${2:?experiment directory}; dir=${dir%/}
+    run "$(scenarios_for "$dir")" "$dir/arms.json" 2 "eval-demo-00-screen-$(basename "$dir")"
     ;;
   confirm)
-    skill=${2:?skill}; shift 2
+    dir=${2:?experiment directory}; dir=${dir%/}; shift 2
     [ $# -gt 0 ] || { echo "confirm needs at least one arm label" >&2; exit 2; }
-    keep=$(printf '%s\n' v00-control "$@" | jq -R . | jq -s .)
-    arms=$(jq -c --argjson keep "$keep" 'map(select(.label as $l | $keep | index($l)))' "skills/$skill/arms.json")
-    run "$(scenarios_judging "$skill")" "$arms" 3 "eval-demo-00-confirm-${skill}"
+    control=$(jq -r '.[0].label' "$dir/arms.json")
+    keep=$(printf '%s\n' "$control" "$@" | jq -R . | jq -s .)
+    arms=$(jq -c --argjson keep "$keep" 'map(select(.label as $l | $keep | index($l)))' "$dir/arms.json")
+    run "$(scenarios_for "$dir")" "$arms" 3 "eval-demo-00-confirm-$(basename "$dir")"
     ;;
   *)
-    echo "usage: $0 triage | screen <skill> | confirm <skill> <arm>..." >&2
+    echo "usage: $0 triage | screen <dir> | confirm <dir> <arm>..." >&2
     exit 2
     ;;
 esac

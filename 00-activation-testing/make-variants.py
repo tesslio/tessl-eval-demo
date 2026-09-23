@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Build the variant plugins and the arms for one skill.
+"""Build the variant plugins and the arms for one experiment.
 
-    ./make-variants.py <skill>
+    ./make-variants.py <dir>
 
-Reads skills/<skill>/variants.json and writes skills/<skill>/variants/ and
-skills/<skill>/arms.json. A variant may change the skill's description,
-rename the skill, or make exact text edits to any plugin file.
+<dir> is skills/<skill> for one skill, or a bundle-level experiment such as
+entry-point. Reads <dir>/variants.json and writes <dir>/variants/ and
+<dir>/arms.json. A variant may change the skill's description, change any
+skills' descriptions by name, rename the skill, or make exact text edits to
+any plugin file. The skill is the directory name, and only matters for
+description and rename.
 
 Each variant copies only the plugins it edits. Its arm points every other
 plugin at the unchanged copy in before/plugins, so an arm differs from the
@@ -30,13 +33,14 @@ FIXTURES = {
 }
 
 
-def main(skill):
-    skill_dir = STEP / "skills" / skill
+def main(experiment):
+    skill_dir = (STEP / experiment).resolve()
+    skill = skill_dir.name
     spec = json.loads((skill_dir / "variants.json").read_text())
     shutil.rmtree(skill_dir / "variants", ignore_errors=True)
     arms = [build_variant(skill, skill_dir / "variants", v) for v in spec["variants"]]
     (skill_dir / "arms.json").write_text(json.dumps(arms, indent=2) + "\n")
-    print(f"{skill}: {len(arms)} arms written to {skill_dir.relative_to(STEP)}/arms.json")
+    print(f"{len(arms)} arms written to {skill_dir.relative_to(STEP)}/arms.json")
 
 
 def build_variant(skill, variants_root, variant):
@@ -49,9 +53,12 @@ def build_variant(skill, variants_root, variant):
             edited.add(plugin)
         return root / plugin
 
+    descriptions = dict(variant.get("descriptions", {}))
     if "description" in variant:
-        plugin = plugin_holding(skill)
-        replace_description(copy_of(plugin) / "skills" / skill / "SKILL.md", variant["description"])
+        descriptions[skill] = variant["description"]
+    for name, description in descriptions.items():
+        plugin = plugin_holding(name)
+        replace_description(copy_of(plugin) / "skills" / name / "SKILL.md", description)
 
     for edit in variant.get("edits", []):
         plugin, _, rest = edit["file"].partition("/")
@@ -117,5 +124,5 @@ def arm(label, variant_root, edited):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        sys.exit("usage: make-variants.py <skill>")
+        sys.exit("usage: make-variants.py <dir>")
     main(sys.argv[1])
