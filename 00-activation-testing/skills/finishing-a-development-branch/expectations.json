@@ -1,0 +1,53 @@
+{
+  "rule": "On Sonnet, the skill loads in at least 2 of 3 runs of each load scenario and at most 1 of 3 runs of each skip scenario.",
+  "scenarios": {
+    "options-menu": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "failing-tests": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "detached-head": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "merge-worktree": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "discard-branch": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "push-rejected": {
+      "load": [
+        "finishing-a-development-branch"
+      ],
+      "skip": []
+    },
+    "no-integration": {
+      "load": [],
+      "skip": [
+        "finishing-a-development-branch"
+      ]
+    },
+    "explain-code": {
+      "load": [],
+      "skip": [
+        "finishing-a-development-branch"
+      ]
+    }
+  }
+}

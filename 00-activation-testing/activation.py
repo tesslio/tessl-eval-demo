@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Tabulate which skills loaded, and judge them against expectations.json.
 
-    ./activation.py <run-id>... [--skill <skill>]
+    ./activation.py <run-id>... [--skill <skill>] [--expectations <file>]
 
 Pass every run that belongs to one comparison, for example the three triage
 runs, so each table covers every model. A cell reads loads/runs, then a
 mark: ok when it meets the rule, FAIL when it breaks it, and nothing when
-the scenario does not judge that skill.
+the scenario does not judge that skill. The number in brackets is the
+mean rubric score of those runs, out of 100.
 """
 import argparse
 import json
@@ -22,9 +23,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("run_ids", nargs="+")
     parser.add_argument("--skill")
+    parser.add_argument("--expectations", default=str(STEP / "expectations.json"))
     args = parser.parse_args()
 
-    expectations = json.loads((STEP / "expectations.json").read_text())["scenarios"]
+    expectations = json.loads(Path(args.expectations).read_text())["scenarios"]
     views = [load_run(run_id) for run_id in args.run_ids]
     counts, columns, pending = count_loads(views)
     skills = [args.skill] if args.skill else sorted(judged_skills(expectations))
@@ -63,6 +65,7 @@ def count_loads(views):
                         continue
                     cell = counts[(name, column)]
                     cell["runs"] += 1
+                    cell["score_total"] += run.get("score") or 0
                     for skill in (run.get("activation") or {}).get("activatedSkills") or []:
                         cell[skill.removeprefix(SKILL_PREFIX)] += 1
     return counts, columns, pending
@@ -109,7 +112,8 @@ def render_skill(skill, counts, columns, expectations):
                 continue
             mark = verdict(expected, cell[skill], cell["runs"])
             failed |= mark == "FAIL"
-            cells.append(f"{cell[skill]}/{cell['runs']} {mark}".strip())
+            mean_score = round(cell["score_total"] / cell["runs"])
+            cells.append(f"{cell[skill]}/{cell['runs']} {mark} ({mean_score})".replace("  ", " "))
         lines.append(f"| {name} | {expected or '-'} | " + " | ".join(cells) + " |")
     lines += ["", f"Result: {'FAIL' if failed else 'pass'}", ""]
     return "\n".join(lines)

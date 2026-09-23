@@ -9,6 +9,10 @@
 #       The unchanged plugins on every scenario, n=3. Tells you which
 #       skills fail the rule. 6 scenarios x 3 = 18 cells.
 #
+#   ./run.sh baseline <dir>
+#       The unchanged plugins on <dir>/scenarios, n=3. The starting point
+#       a skill's variants are compared with.
+#
 #   ./run.sh screen <dir>
 #       Every arm in <dir>/arms.json, n=2. For skills/<skill>, only the
 #       scenarios that judge that skill; for a bundle-level experiment such
@@ -29,6 +33,7 @@ SCORER=(--scorer-agent claude --scorer-model claude-opus-4-6)
 # it under load or skip, copied with the codebase they install, because a
 # run takes one scenarios directory.
 scenarios_for() {
+  if [ -d "$1/scenarios" ]; then echo "$1/scenarios"; return; fi
   case "$1" in skills/*) scenarios_judging "${1#skills/}" ;; *) echo before/scenarios ;; esac
 }
 
@@ -51,6 +56,11 @@ case "${1:-}" in
   triage)
     run before/scenarios arms-control.json 3 "eval-demo-00-triage"
     ;;
+  baseline)
+    # The unchanged plugins on one skill's own scenarios, n=3.
+    dir=${2:?experiment directory}; dir=${dir%/}
+    run "$(scenarios_for "$dir")" arms-control.json 3 "eval-demo-00-baseline-$(basename "$dir")"
+    ;;
   screen)
     dir=${2:?experiment directory}; dir=${dir%/}
     run "$(scenarios_for "$dir")" "$dir/arms.json" 2 "eval-demo-00-screen-$(basename "$dir")"
@@ -64,7 +74,7 @@ case "${1:-}" in
     run "$(scenarios_for "$dir")" "$arms" 3 "eval-demo-00-confirm-$(basename "$dir")"
     ;;
   *)
-    echo "usage: $0 triage | screen <dir> | confirm <dir> <arm>..." >&2
+    echo "usage: $0 triage | baseline <dir> | screen <dir> | confirm <dir> <arm>..." >&2
     exit 2
     ;;
 esac

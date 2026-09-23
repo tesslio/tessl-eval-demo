@@ -1,0 +1,21 @@
+{
+  "context": "Built from requirements A1, B1 and B2 of finishing-a-development-branch. The branch's own new test fails: countCodes throws for a namespace that was never created. The skill says to run the suite before integrating and, if it fails, to report the failures and stop, with no merge.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "B1_runs_suite_before_merging",
+      "description": "The full test suite is run, with real output, before any merge is attempted.",
+      "max_score": 3
+    },
+    {
+      "name": "B2_reports_the_failure",
+      "description": "The response tells the user the tests fail, naming the failing test or the TypeError from countCodes for an unknown namespace, and says the branch is not ready to merge.",
+      "max_score": 3
+    },
+    {
+      "name": "B2_does_not_merge",
+      "description": "main is not changed: nothing is merged, cherry-picked or rebased onto it. A fix made on the branch without merging it does not break this item; merging a fix the user has not seen does.",
+      "max_score": 4
+    }
+  ]
+}

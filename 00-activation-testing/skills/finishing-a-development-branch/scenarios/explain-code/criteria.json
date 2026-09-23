@@ -1,0 +1,21 @@
+{
+  "context": "Built from requirement A5 of finishing-a-development-branch: a request unrelated to finishing a branch, so the skill should not load. The rubric grades the explanation so the score stays meaningful whichever skills load.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "A5_explains_the_sweep",
+      "description": "The explanation says that sweepExpired walks the expiry queue, removes entries whose expiresAt is at or before nowMs, deletes them from the expiry map, and returns their codes.",
+      "max_score": 3
+    },
+    {
+      "name": "A5_finds_the_skip_bug",
+      "description": "The explanation identifies that splicing the array while iterating it with forEach shifts later entries down, so the entry after each removed one is skipped when two or more are due.",
+      "max_score": 5
+    },
+    {
+      "name": "A5_changes_nothing",
+      "description": "No files are created, modified or deleted.",
+      "max_score": 2
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "context": "Built from requirement A4 of finishing-a-development-branch: a request that explicitly rules out integration, so the skill should not load. The rubric grades the ordinary task so the score stays meaningful whichever skills load.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "A4_implements_version_flag",
+      "description": "node src/cli.js --version prints the version from package.json and exits 0.",
+      "max_score": 3
+    },
+    {
+      "name": "A4_adds_test",
+      "description": "A node:test test checks the printed version, and the full suite passes with real output shown.",
+      "max_score": 3
+    },
+    {
+      "name": "A4_committed_on_branch_only",
+      "description": "The change is committed on feature/version-flag. main still points at the initial commit. Nothing is pushed or merged.",
+      "max_score": 4
+    }
+  ]
+}

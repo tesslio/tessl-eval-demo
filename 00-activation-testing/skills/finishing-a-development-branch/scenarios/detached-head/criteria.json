@@ -1,0 +1,26 @@
+{
+  "context": "Built from requirements A2, B3, B6 and B7 of finishing-a-development-branch. The finished work is on a detached HEAD inside a worktree. The skill says this case gets a reduced menu of two options (push as a new branch and open a pull request, or keep as-is), with no local merge option, and that the agent waits for the choice.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "B3_recognises_detached_worktree",
+      "description": "The response recognises that the work is on a detached HEAD in a worktree, not on a named branch.",
+      "max_score": 2
+    },
+    {
+      "name": "B6_presents_the_two_options",
+      "description": "The response presents exactly two options: push the work as a new branch and open a pull request, or keep it as it is. It does not offer a local merge into main, and does not offer to discard the work.",
+      "max_score": 4
+    },
+    {
+      "name": "B7_waits_for_choice",
+      "description": "The agent does not push, merge, create a branch, or remove the worktree. At the end the detached commit is still only in the worktree and main is unchanged.",
+      "max_score": 3
+    },
+    {
+      "name": "B1_runs_tests_first",
+      "description": "The test suite is run, with real output, before the options are presented.",
+      "max_score": 1
+    }
+  ]
+}

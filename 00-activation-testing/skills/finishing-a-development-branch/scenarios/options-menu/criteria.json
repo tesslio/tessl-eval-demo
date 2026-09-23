@@ -1,0 +1,26 @@
+{
+  "context": "Built from requirements A2, B1, B4, B5 and B7 of finishing-a-development-branch. The user asks what their integration options are for a finished branch in a normal repository. The skill says to run the full test suite, name the base branch, present exactly three options (merge locally, push and open a pull request, keep as-is), and wait for the user's choice.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "B1_runs_full_suite_first",
+      "description": "The full test suite (all of test/, not only the new test) is run, with real output, before any options are presented.",
+      "max_score": 2
+    },
+    {
+      "name": "B4_names_base_branch",
+      "description": "The response names main as the branch this work would integrate into.",
+      "max_score": 1
+    },
+    {
+      "name": "B5_presents_exactly_three_options",
+      "description": "The response presents these three options and no others: merge back to main locally, push the branch and open a pull request, keep the branch as it is. Offering to delete or discard the branch counts as an extra option.",
+      "max_score": 3
+    },
+    {
+      "name": "B7_waits_for_choice",
+      "description": "The agent does not merge, push, open a pull request or delete anything. At the end, main still points at the initial commit and feature/count-codes still exists.",
+      "max_score": 4
+    }
+  ]
+}
