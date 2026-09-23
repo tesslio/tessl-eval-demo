@@ -22,19 +22,33 @@ tessl login
 # 2. give this directory its own project, in a workspace you can write to
 tessl project create --workspace <your-workspace>
 
-# 3. run both eval sweeps
-./run.sh
+# 3. run the cheapest useful sweep first
+RUNS=1 ./run.sh skills
 ```
 
 That works on a fresh clone. The four plugins in `arms.json` are published
 and public, so nothing needs building or publishing first — `run.sh` pulls
 them from the registry.
 
-Cheaper first run, one model and one repetition instead of three:
+`tessl workspace list` shows the workspaces you can write to. If you belong
+to more than one organization, `project create` will ask for `--org` as well;
+`tessl org list` names them. If it reports that a project of this name
+already exists, you have cloned the repo before — give the new one its own
+name with `tessl project create --new --workspace <ws> <some-other-name>`.
 
-```bash
-MODEL=claude-sonnet-4-6 RUNS=1 ./run.sh
-```
+Then size the spend before running more. `run.sh` takes an argument and two
+environment variables:
+
+| command | what it runs | cells |
+|---|---|---|
+| `RUNS=1 ./run.sh skills` | skills vs none, one repetition | 6 |
+| `RUNS=1 ./run.sh models` | all three models, one repetition | 9 |
+| `./run.sh` | both, three repetitions | 45 |
+
+A cell is one scenario solved once and scored once, and each cell consumes
+credits (see https://tessl.io/pricing/). Opus cells cost the most and Haiku
+cells the least, so read the table before running the full sweep. `MODEL=…` changes the model for the skills sweep;
+the model comparison sets its model per arm and always runs all three.
 
 `run.sh` prints a run id for each sweep. Watch them at
 `https://tessl.io/workspaces/<your-workspace>/eval-runs/<id>`, or from the
