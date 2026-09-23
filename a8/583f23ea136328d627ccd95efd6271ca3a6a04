@@ -1,0 +1,310 @@
+00-with-vs-without-codebase/before/scenarios/linkbox-expiry-sweep/criteria.json
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-36
+00-with-vs-without-codebase/before/scenarios/linkbox-namespace-isolation/criteria.json
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-36
+00-with-vs-without-codebase/before/scenarios/linkbox-namespace-isolation/task.md
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-246
+00-with-vs-without-codebase/after/scenarios/linkbox-safe-handoff/criteria.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1,3-16,18-26,28-31
+  s_121aef358488c8::t_b4dfbb07ca3dbb 2,17,27
+00-with-vs-without-codebase/after/scenarios/repo/src/expiry.js
+  s_121aef358488c8::t_aec0f2c3976f0a 1-36
+01-activation-testing/before/plugins/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-181
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_9ea2da37a34c07 1-158
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-285
+01-activation-testing/before/plugins/sdlc-planning/skills/writing-plans/plan-document-reviewer-prompt.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-49
+00-with-vs-without-codebase/run.sh
+  s_121aef358488c8::t_87718b9e457cde 1-24
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-69
+01-activation-testing/before/scenarios/repo/src/expiry.js
+  s_121aef358488c8::t_9ea2da37a34c07 1-36
+01-activation-testing/before/scenarios/repo/test/expiry.test.js
+  s_121aef358488c8::t_9ea2da37a34c07 1-23
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_78cacbb1229532 1-122
+00-with-vs-without-codebase/after/scenarios/repo/package.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1-8
+00-with-vs-without-codebase/after/scenarios/repo/README.md
+  s_121aef358488c8::t_aec0f2c3976f0a 1-16
+00-with-vs-without-codebase/arms.json
+  s_121aef358488c8::t_87718b9e457cde 1-14
+01-activation-testing/before/plugins/sdlc-planning/skills/writing-plans/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-155
+01-activation-testing/variants.json
+  s_121aef358488c8::t_63f8491c6f51f9 1-60
+01-activation-testing/variants/v09-rename/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_78cacbb1229532 1-181
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_78cacbb1229532 1-14
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_78cacbb1229532 1-58
+01-activation-testing/before/scenarios/linkbox-discard-branch/criteria.json
+  s_121aef358488c8::t_12cecfefad52a5 1-26
+01-activation-testing/variants/v10-combined-router/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-28
+00-with-vs-without-codebase/after/scenarios/linkbox-namespace-isolation/criteria.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1,3-21,23-36
+  s_121aef358488c8::t_b4dfbb07ca3dbb 2,22
+01-activation-testing/before/scenarios/repo/README.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-16
+00-with-vs-without-codebase/after/scenarios/repo/test/store.test.js
+  s_121aef358488c8::t_aec0f2c3976f0a 1-25
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-58
+01-activation-testing/before/plugins/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-120
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-320
+01-activation-testing/variants/v09-rename/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-28
+01-activation-testing/before/scenarios/linkbox-discard-branch/scenario.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-5
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-115
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-122
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-169
+00-with-vs-without-codebase/after/scenarios/linkbox-namespace-isolation/task.md
+  s_121aef358488c8::t_aec0f2c3976f0a 1-28
+01-activation-testing/before/scenarios/repo/src/store.js
+  s_121aef358488c8::t_9ea2da37a34c07 1-41
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-285
+01-activation-testing/before/scenarios/repo/package.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-8
+01-activation-testing/before/plugins/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-7
+01-activation-testing/before/scenarios/linkbox-discard-branch/task.md
+  s_121aef358488c8::t_12cecfefad52a5 1-20
+00-with-vs-without-codebase/after/scenarios/linkbox-expiry-sweep/task.md
+  s_121aef358488c8::t_aec0f2c3976f0a 1-25
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-68
+01-activation-testing/variants/v07-combined/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+00-with-vs-without-codebase/after/scenarios/linkbox-expiry-sweep/scenario.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1-5
+01-activation-testing/variants/v09-rename/sdlc-assurance/skills/integrating-a-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/variants/v09-rename/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-205
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_78cacbb1229532 1-115
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-119
+01-activation-testing/make-variants.py
+  s_121aef358488c8::t_091f2c6b512d53 1-103
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/before/scenarios/linkbox-safe-handoff/criteria.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-31
+00-with-vs-without-codebase/before/scenarios/linkbox-safe-handoff/criteria.json
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-31
+01-activation-testing/before/plugins/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-320
+01-activation-testing/before/plugins/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-28
+00-with-vs-without-codebase/after/scenarios/repo/test/expiry.test.js
+  s_121aef358488c8::t_aec0f2c3976f0a 1-23
+01-activation-testing/variants/v06-keywords/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-60
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_78cacbb1229532 1-169
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/arms.json
+  s_121aef358488c8::t_78cacbb1229532 1-211
+01-activation-testing/before/plugins/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-198
+01-activation-testing/before/scenarios/linkbox-worktree-cleanup/scenario.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-5
+01-activation-testing/before/plugins/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-7
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_78cacbb1229532 1-68
+01-activation-testing/variants/v08-router-broadened/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-28
+01-activation-testing/before/scenarios/linkbox-safe-handoff/scenario.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-5
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_78cacbb1229532 1-119
+00-with-vs-without-codebase/before/scenarios/linkbox-expiry-sweep/task.md
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-243
+01-activation-testing/before/plugins/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-205
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_78cacbb1229532 1-69
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_78cacbb1229532 1-198
+01-activation-testing/before/plugins/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-60
+00-with-vs-without-codebase/after/scenarios/linkbox-safe-handoff/scenario.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1-5
+00-with-vs-without-codebase/before/scenarios/linkbox-safe-handoff/task.md
+  s_121aef358488c8::t_b4dfbb07ca3dbb 1-243
+00-with-vs-without-codebase/after/scenarios/linkbox-expiry-sweep/criteria.json
+  s_121aef358488c8::t_b4dfbb07ca3dbb 2,7,22
+  s_121aef358488c8::t_aec0f2c3976f0a 1,3-6,8-21,23-36
+00-with-vs-without-codebase/after/scenarios/repo/src/store.js
+  s_121aef358488c8::t_aec0f2c3976f0a 1-41
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+00-with-vs-without-codebase/after/scenarios/linkbox-namespace-isolation/scenario.json
+  s_121aef358488c8::t_aec0f2c3976f0a 1-5
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+00-with-vs-without-codebase/after/scenarios/linkbox-safe-handoff/task.md
+  s_121aef358488c8::t_aec0f2c3976f0a 1-25
+01-activation-testing/run.sh
+  s_121aef358488c8::t_12b4b85945ed02 1-47
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_9ea2da37a34c07 1-72
+01-activation-testing/before/scenarios/repo/test/store.test.js
+  s_121aef358488c8::t_9ea2da37a34c07 1-25
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/before/scenarios/repo/src/cli.js
+  s_121aef358488c8::t_9ea2da37a34c07 1-30
+01-activation-testing/before/scenarios/linkbox-worktree-cleanup/task.md
+  s_121aef358488c8::t_12cecfefad52a5 1-27
+01-activation-testing/before/plugins/sdlc-planning/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-7
+01-activation-testing/before/scenarios/linkbox-safe-handoff/task.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-25
+00-with-vs-without-codebase/after/scenarios/repo/src/cli.js
+  s_121aef358488c8::t_aec0f2c3976f0a 1-30
+01-activation-testing/before/plugins/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-14
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-225
+01-activation-testing/before/scenarios/linkbox-worktree-cleanup/criteria.json
+  s_121aef358488c8::t_12cecfefad52a5 1-26
+01-activation-testing/before/plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-225
+01-activation-testing/before/plugins/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_9ea2da37a34c07 1-95
+01-activation-testing/before/plugins/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_9ea2da37a34c07 1-7
+01-activation-testing/variants/v09-rename/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-95
+01-activation-testing/variants/v09-rename/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_78cacbb1229532 1-120
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_657445b4c13c17 1-7
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_3a5969e279bb51 1-205
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_17a8048394e0da 1-95
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_ab5c106dac72b2 1-181
+01-activation-testing/variants/v01-no-internal-gate/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_4341eec2eefa51 1-120
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_d18cc06bc4dcc0 1-7
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_6db814c7fc9f7f 1-205
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_05b8432998cf4c 1-95
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_143509e3a4a131 1-181
+01-activation-testing/variants/v02-question-triggers/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_aa143953c0354e 1-120
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_8797a1a0357670 1-7
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_7258be383c847f 1-205
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_a47d49ec45830b 1-95
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_732c63cb869f44 1-181
+01-activation-testing/variants/v03-intent-first/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_47f11284e16bad 1-120
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_25df59c98e65f0 1-7
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_cb7ca4ad7af793 1-205
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_e83f9027b69918 1-95
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_967b91e1edd2e3 1-181
+01-activation-testing/variants/v04-one-sentence/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_14eef81209bc72 1-120
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_21a0e6606766f5 1-7
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_49f21ece286dd6 1-205
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_bda607368eb9b1 1-95
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_d93e9a375fc2f8 1-181
+01-activation-testing/variants/v05-safety-framing/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_feda1d57da13b6 1-120
+01-activation-testing/variants/v06-keywords/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_2c3952c759f53b 1-7
+01-activation-testing/variants/v06-keywords/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_2653427129aed7 1-205
+01-activation-testing/variants/v06-keywords/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_bc0325a1f0ab43 1-95
+01-activation-testing/variants/v06-keywords/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_8b9c8609e63fd3 1-181
+01-activation-testing/variants/v06-keywords/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_ddd7bc5902e5fd 1-120
+01-activation-testing/variants/v07-combined/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_b21e5d28d2f0fb 1-7
+01-activation-testing/variants/v07-combined/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_1ab2d6d09a46e8 1-205
+01-activation-testing/variants/v07-combined/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_67969c00492190 1-95
+01-activation-testing/variants/v07-combined/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_f175ba065bed1f 1-181
+01-activation-testing/variants/v07-combined/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_7316c8f11984df 1-120
+01-activation-testing/variants/v08-router-broadened/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_93bd4e23011c9f 1-7
+01-activation-testing/variants/v09-rename/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_c930ef42431920 1-7
+01-activation-testing/variants/v09-rename/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_52a8c13184e20b 1-7
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_8a795b7bef2aa3 1-158
+01-activation-testing/variants/v09-rename/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_79fb87b202c2ed 1-72
+01-activation-testing/variants/v09-rename/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_09fae5bf3dfb0a 1-7
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_29e21a38abfbe6 1-7
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/skills/receiving-code-review/SKILL.md
+  s_121aef358488c8::t_85a5ca32f85941 1-205
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/skills/requesting-code-review/SKILL.md
+  s_121aef358488c8::t_9e3a102a70ea3b 1-95
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/skills/requesting-code-review/references/code-reviewer.md
+  s_121aef358488c8::t_ef9a18122639d2 1-181
+01-activation-testing/variants/v10-combined-router/sdlc-assurance/skills/verification-before-completion/SKILL.md
+  s_121aef358488c8::t_bf60081d7dabc7 1-120
+01-activation-testing/variants/v10-combined-router/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_e331eb2234e3ba 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a8583f23ea136328d627ccd95efd6271ca3a6a04",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
