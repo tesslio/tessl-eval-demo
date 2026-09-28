@@ -15,11 +15,11 @@ test('resolve returns the original URL for a code from the same namespace', () =
   assert.strictEqual(shortener.resolve(code), 'https://example.invalid/docs');
 });
 
-test('two namespaces can each shorten their own distinct URLs independently', () => {
+test('the same URL gets a different code in each namespace', () => {
   const acme = createShortener('acme');
   const globex = createShortener('globex');
-  const codeA = acme.shorten('https://acme.invalid/report');
-  const codeB = globex.shorten('https://globex.invalid/dashboard');
+  const codeA = acme.shorten('https://example.invalid/start');
+  const codeB = globex.shorten('https://example.invalid/start');
   assert.notStrictEqual(codeA, codeB);
   assert.strictEqual(acme.resolve(codeB), null);
 });

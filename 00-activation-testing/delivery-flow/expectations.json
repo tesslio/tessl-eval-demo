@@ -1,0 +1,132 @@
+{
+  "scenarios": {
+    "named-1": {
+      "rung": "named",
+      "form": "command",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "obvious-1": {
+      "rung": "obvious",
+      "form": "command",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "obvious-2": {
+      "rung": "obvious",
+      "form": "command",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "normal-1": {
+      "rung": "normal",
+      "form": "terse",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "normal-2": {
+      "rung": "normal",
+      "form": "embedded",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "normal-3": {
+      "rung": "normal",
+      "form": "pressure",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "borderline-load-1": {
+      "rung": "borderline-load",
+      "form": "terse",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "borderline-load-2": {
+      "rung": "borderline-load",
+      "form": "terse",
+      "load": [
+        "delivery-flow"
+      ]
+    },
+    "borderline-skip-1": {
+      "rung": "borderline-skip",
+      "form": "question",
+      "skip": [
+        "delivery-flow"
+      ]
+    },
+    "borderline-skip-2": {
+      "rung": "borderline-skip",
+      "form": "command",
+      "skip": [
+        "delivery-flow"
+      ]
+    },
+    "should-not-1": {
+      "rung": "should-not",
+      "form": "command",
+      "skip": [
+        "delivery-flow"
+      ]
+    },
+    "should-not-2": {
+      "rung": "should-not",
+      "form": "question",
+      "skip": [
+        "delivery-flow"
+      ]
+    },
+    "heldout-normal": {
+      "rung": "normal",
+      "form": "question",
+      "load": [
+        "delivery-flow"
+      ],
+      "heldout": true
+    },
+    "heldout-borderline": {
+      "rung": "borderline-load",
+      "form": "command",
+      "load": [
+        "delivery-flow"
+      ],
+      "heldout": true
+    },
+    "nb-executing-plans": {
+      "rung": "neighbor",
+      "form": "command",
+      "load": [
+        "executing-plans"
+      ]
+    },
+    "nb-receiving-code-review": {
+      "rung": "neighbor",
+      "form": "command",
+      "load": [
+        "receiving-code-review"
+      ]
+    },
+    "nb-systematic-debugging": {
+      "rung": "neighbor",
+      "form": "command",
+      "load": [
+        "systematic-debugging"
+      ]
+    },
+    "nb-finishing": {
+      "rung": "neighbor",
+      "form": "command",
+      "load": [
+        "finishing-a-development-branch"
+      ]
+    }
+  }
+}

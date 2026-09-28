@@ -1,0 +1,1 @@
+We're starting on custom aliases next sprint, so I've been reading through the CLI. One thing I noticed on the way: `shorten --ttl-ms 1.5` is accepted, so a link can get a fractional lifetime. A ttl should be a whole number of milliseconds, rejected otherwise like a non-positive one. Can you sort that out?
