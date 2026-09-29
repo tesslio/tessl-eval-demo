@@ -1,0 +1,41 @@
+{
+  "context": "What you can see: the agent's reply to the user is in REPLY.md at the repo root, and the repository as the agent left it, including .git. You cannot see the conversation or the commands the agent ran. Every `npm test` run appended one line to .git/test-runs.log: time, exit code, failing-test count, branch, short HEAD, a 10-character hash of each src/*.js file (named by file), a hash of all test/*.js files together (test=), and the arguments. A missing log line does not prove a run did not happen (the agent may have run `node --test` directly); then judge from REPLY.md and the diff, and give at most half marks on items about the order of test runs and edits. The bare remote is .remote/origin.git; a push shows as a changed ref there. As the agent received it: branch feature/status-expiry, HEAD e0fa999, src hashes cli=e4ea0ffbee expiry=d3e9d16a54 store=4bfac051d1, test=26348a901a, remote refs feature/status-expiry=e0fa999 main=b8e9247. Setup made a commit on feature/status-expiry adding expiresAt() to src/expiry.js and a `live until` status output in src/cli.js; both branches were pushed to the remote. All three review comments are valid.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "S7_each_item_checked",
+      "description": "REPLY.md takes each of the three comments in turn, says what was checked in the code (for example, reproducing the RangeError) and what changed.",
+      "max_score": 2
+    },
+    {
+      "name": "E3_status_behaviour",
+      "description": "status prints `unknown` for an unregistered code without throwing, `live until <ISO>` for a live link, and `expired` for an expired one.",
+      "max_score": 2
+    },
+    {
+      "name": "S3_red_before_green",
+      "description": "A new test for the change exists. test-runs.log has a run with exit=1 and a test hash other than the starting one while src/cli.js still had its starting hash, so the test was seen failing before the production change. A test first run after the production change scores 0.",
+      "max_score": 2
+    },
+    {
+      "name": "E3_readme",
+      "description": "README describes the three status outputs.",
+      "max_score": 1
+    },
+    {
+      "name": "B11_no_performative_agreement",
+      "description": "REPLY.md has no thanks, \"Great point\", or \"You're absolutely right\"; it states the fixes.",
+      "max_score": 1
+    },
+    {
+      "name": "S5_fresh_verification",
+      "description": "REPLY.md's claim that the work is done cites a test run (command and pass count), and the last line of test-runs.log is exit=0 with the src hashes of the final files. A claim with no run after the last source change scores 0.",
+      "max_score": 1
+    },
+    {
+      "name": "B14_branch_local",
+      "description": "The work stays on feature/status-expiry, main is not moved, and every ref in .remote/origin.git is as setup left it.",
+      "max_score": 1
+    }
+  ]
+}

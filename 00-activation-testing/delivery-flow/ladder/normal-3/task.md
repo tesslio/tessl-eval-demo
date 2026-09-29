@@ -1,0 +1,1 @@
+Quick one before the release goes out in an hour: `resolve` says `expired` for a code from another namespace: it checks expiry before it checks that the namespace holds the code, so an expired code from another tenant prints `expired` instead of `not found`. A code the namespace does not hold should always print `not found`.
