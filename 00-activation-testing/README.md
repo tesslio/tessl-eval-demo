@@ -8,7 +8,7 @@ An agent decides for itself whether to read a skill, from the skill's name and a
 
 The opposite fails too. A description wide enough loads the skill on requests it has nothing to do with, and its instructions then push the agent the wrong way.
 
-Every later step in this repository improves what a skill says. None of that matters for a skill the agent never loads, so activation comes first.
+Every later step in this repository improves what a skill says. None of it has any effect on a skill the agent never loads, so activation comes first.
 
 ## The approach
 
@@ -114,6 +114,18 @@ tessl eval view <run-id> --json | jq -r '.data.attributes.scenarios[]
 Compare each line with the scenario's expected result in `expectations.json`.
 
 **6. Confirm** with `-n 3` on `ladder/` and `heldout/`. Run `neighbors/` with the neighbors' bodies stubbed and your skill's body real. Run `tasks/` without `--skip-scoring`, with no bodies stubbed, so the full tasks are scored.
+
+## A second example: test-driven-development
+
+Step 01 found that `test-driven-development`, the skill the later steps follow, loaded in only 29 of 50 runs. Its description ended with "Do not activate directly for a standalone request that has not gone through delivery-flow first", so the agent often skipped it unless the router sent it there.
+
+The fix is a shorter description without that sentence (307 characters instead of 484):
+
+> Implements a feature or bug fix test-first: write one failing test, run it and watch it fail, write the minimal code to pass, then refactor with the tests green. Use when a change alters code behavior: a new feature, a bug fix, or a behavior change, whether the request comes alone or through delivery-flow.
+
+With the body replaced by a stop line, the skill then loaded in 13 of 14 runs on the step 01 tasks (15 cells). This check is lighter than the full ladder above: it uses the five feature and bug-fix tasks only, with no requests the skill should stay out of. The change is applied as the first part of [step 02](../02-mutation/), and `arms-activation.json` there reruns the check.
+
+A shorter description is safer as well as clearer. In another skill set, a description rewritten to about 800 characters stopped a neighboring skill from loading on its own requests; the original wording padded to the same length did the same, so the cause was the length, not the words. Keep descriptions short, and run the neighbor checks when one grows.
 
 ## In this directory
 
