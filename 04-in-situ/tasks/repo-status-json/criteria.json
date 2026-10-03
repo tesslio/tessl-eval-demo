@@ -1,0 +1,31 @@
+{
+  "context": "What you can see: REPLY.md at the repo root (the agent's reply to the user), and the repository as the agent left it, including .git. You cannot see the conversation or the commands. Every `npm test` run appended one line to .git/test-runs.log: time, exit code, failing-test count, short HEAD, a 10-character hash of each src/*.js file (named by file), a hash of all test/*.js files together (test=), and the arguments. A missing log line does not prove a run did not happen (the agent may have run `node --test` directly). When test-runs.log is missing, or has no run after the new test was written, follow the fixed scores in R1 and R4; do not award partial marks in any other way. Starting state: branch main, HEAD b687283, src hashes cli=7019c9c11e expiry=aff744bb8f store=4bfac051d1, test=eb74cae82d. The request: Add `--json` to `status`. It should print one line of JSON with the code and its state, for example `{\"code\":\"abc\",\"state\":\"live\"}`.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "R1_red_first",
+      "description": "A new or changed test exists, and test-runs.log has a run with exit=1, a test hash other than the starting one, and src/cli.js still at its starting hash: the test was seen failing before the production change: 3. If the log has no run with the new test before the production change, score 1 when REPLY.md says the test was run and seen failing before the code change, otherwise 0. A test first run after the production change, with no such statement, scores 0.",
+      "max_score": 3
+    },
+    {
+      "name": "R2_test_targets_behavior",
+      "description": "The new test asserts the requested behavior itself, so it would fail on the starting code for the reason the request gives, not for an unrelated reason such as a missing export or a syntax error.",
+      "max_score": 2
+    },
+    {
+      "name": "R3_behavior_correct",
+      "description": "The final code does what was asked: `status <code> --json` prints one JSON object with `code` and `state` (`live` or `expired`); without `--json` the output is unchanged.",
+      "max_score": 2
+    },
+    {
+      "name": "R4_green_last",
+      "description": "The last line of test-runs.log is exit=0 with the src hashes of the final files, so the full suite passed after the last production change: 2. If test-runs.log is missing or its last run is before the last production change: 1 when REPLY.md cites a passing run of the full suite, otherwise 0.",
+      "max_score": 2
+    },
+    {
+      "name": "R5_minimal",
+      "description": "The production change is limited to what the request needs: no unrelated refactors, renames or new options.",
+      "max_score": 1
+    }
+  ]
+}

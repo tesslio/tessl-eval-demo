@@ -1,0 +1,137 @@
+[
+  {
+    "label": "claude-sonnet-4-6-skills",
+    "agent": "claude",
+    "model": "claude-sonnet-4-6",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "claude-sonnet-4-6-no-skills",
+    "agent": "claude",
+    "model": "claude-sonnet-4-6",
+    "fixtures": {}
+  },
+  {
+    "label": "claude-opus-5-skills",
+    "agent": "claude",
+    "model": "claude-opus-5",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "claude-opus-5-no-skills",
+    "agent": "claude",
+    "model": "claude-opus-5",
+    "fixtures": {}
+  },
+  {
+    "label": "claude-haiku-4-5-skills",
+    "agent": "claude",
+    "model": "claude-haiku-4-5",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "claude-haiku-4-5-no-skills",
+    "agent": "claude",
+    "model": "claude-haiku-4-5",
+    "fixtures": {}
+  },
+  {
+    "label": "tessl-sonnet-4-6-skills",
+    "agent": "tessl",
+    "model": "claude-sonnet-4-6",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "tessl-sonnet-4-6-no-skills",
+    "agent": "tessl",
+    "model": "claude-sonnet-4-6",
+    "fixtures": {}
+  },
+  {
+    "label": "codex-gpt-6-sol-skills",
+    "agent": "codex",
+    "model": "gpt-6-sol",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "codex-gpt-6-sol-no-skills",
+    "agent": "codex",
+    "model": "gpt-6-sol",
+    "fixtures": {}
+  }
+]
