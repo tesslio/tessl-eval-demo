@@ -1,0 +1,457 @@
+03-ablation/versions/full/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-29
+06-regression/versions/reworded/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-198
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-285
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-69
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+04-in-situ/tasks/linkbox/src/expiry.js
+  s_121aef358488c8::t_2d4736504d6510 1-29
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-58
+03-ablation/versions/description-only/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-4
+06-regression/versions/baseline/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_c603a1657c7d1a 1-7
+03-ablation/versions/no-rules/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-119
+03-ablation/arms-confirm.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-59
+03-ablation/versions/no-rules/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+06-regression/versions/no-cycle/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-60
+06-regression/versions/no-cycle/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_c603a1657c7d1a 1-7
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-285
+06-regression/arms.json
+  s_121aef358488c8::t_222ddf1ad8d73b 1-78
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-58
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-58
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_c603a1657c7d1a 1-72
+04-in-situ/tasks/repo-status-unknown/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-69
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/versions/no-cycle/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_222ddf1ad8d73b 1-19
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_c603a1657c7d1a 1-158
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-119
+04-in-situ/tasks/linkbox/src/store.js
+  s_121aef358488c8::t_2d4736504d6510 1-34
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+06-regression/versions/reworded/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_c603a1657c7d1a 1-7
+06-regression/versions/reworded/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-60
+03-ablation/versions/cycle-only/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+05-compare/arms-opus-rerun.json
+  s_121aef358488c8::t_2f3df56a9588fd 1-2,4,6-23,25,27-29
+  s_121aef358488c8::t_de8a299a00d7b3 3,5,24,26
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+03-ablation/versions/cycle-only/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+04-in-situ/tasks/repo-fractional-ttl/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-115
+03-ablation/versions/no-cycle/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-19
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+04-in-situ/tasks/linkbox/package.json
+  s_121aef358488c8::t_2d4736504d6510 1-8
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/README.md
+  s_121aef358488c8::t_e793311f2e45fb 1-70
+03-ablation/versions/full/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-14
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+04-in-situ/tasks/repo-fractional-ttl/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1-31
+03-ablation/versions/description-only/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+04-in-situ/tasks/repo-resolve-namespace/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+03-ablation/versions/no-done-check/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+04-in-situ/tasks/repo-status-unknown/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+04-in-situ/tasks/repo-fractional-ttl/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+04-in-situ/tasks/linkbox/README.md
+  s_121aef358488c8::t_2d4736504d6510 1-13
+04-in-situ/tasks/empty-status-unknown/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+06-regression/versions/old-description/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-60
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/versions/old-description/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_222ddf1ad8d73b 1-29
+03-ablation/versions/no-done-check/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-24
+04-in-situ/tasks/repo-status-json/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+04-in-situ/tasks/empty-status-unknown/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1,3-6,8-31
+  s_121aef358488c8::t_42de1b2f877721 2,7
+03-ablation/README.md
+  s_121aef358488c8::t_9d4c9a3cdb5c61 22,40,67-70
+  s_121aef358488c8::t_9badb518080890 20,26,28-39,41-43,46,59-60
+  s_121aef358488c8::t_a92000ce73bc43 1-19,21,23-25,27,44-45,47-58,61-66
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-119
+03-ablation/versions/description-only/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+04-in-situ/tasks/empty-fractional-ttl/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+04-in-situ/tasks/repo-remaining-command/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+04-in-situ/tasks/empty-remaining-command/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-69
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-169
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_c603a1657c7d1a 1-72
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+04-in-situ/tasks/empty-status-json/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-68
+03-ablation/versions/no-cycle/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-60
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-58
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-115
+03-ablation/versions/full/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+04-in-situ/tasks/repo-fractional-ttl/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+04-in-situ/tasks/empty/README.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-122
+03-ablation/versions/no-done-check/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+04-in-situ/tasks/empty-resolve-namespace/criteria.json
+  s_121aef358488c8::t_42de1b2f877721 2,7
+  s_121aef358488c8::t_2d4736504d6510 1,3-6,8-31
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-69
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-115
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+03-ablation/versions/cycle-only/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-14
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-68
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+04-in-situ/tasks/empty-resolve-namespace/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-14
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+04-in-situ/tasks/linkbox/src/cli.js
+  s_121aef358488c8::t_2d4736504d6510 1-78
+04-in-situ/tasks/empty-fractional-ttl/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-169
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+04-in-situ/tasks/repo-resolve-namespace/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1-31
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-115
+04-in-situ/tasks/empty-remaining-command/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+04-in-situ/README.md
+  s_121aef358488c8::t_d94a066e4985f9 30
+  s_121aef358488c8::t_632a81d02ccd07 33
+  s_121aef358488c8::t_084ab9701062e1 1-29,31-32,34-67
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+README.md
+  s_121aef358488c8::t_9badb518080890 17-18
+  s_121aef358488c8::t_57805d7476cfe7 21-24,38
+  s_121aef358488c8::t_632a81d02ccd07 19-20
+04-in-situ/arms-confirm.json
+  s_121aef358488c8::t_9b6ad5f7c760c2 1-21
+06-regression/versions/baseline/sdlc-implementation/skills/executing-plans/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-60
+04-in-situ/tasks/empty-fractional-ttl/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+06-regression/versions/old-description/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_c603a1657c7d1a 1-7
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-68
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-14
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-68
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+04-in-situ/tasks/repo-remaining-command/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+04-in-situ/tasks/empty-remaining-command/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+04-in-situ/tasks/repo-status-json/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1-31
+04-in-situ/tasks/repo-status-json/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+06-regression/versions/baseline/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-198
+04-in-situ/tasks/repo-remaining-command/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1-31
+03-ablation/versions/cycle-only/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+05-compare/arms-judge.json
+  s_121aef358488c8::t_4c183201774e94 1-23
+04-in-situ/tasks/linkbox/test/store.test.js
+  s_121aef358488c8::t_2d4736504d6510 1-25
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+03-ablation/versions/no-cycle/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+05-compare/README.md
+  s_121aef358488c8::t_9ddec1791a8e02 1-35,37-41,43,57-58,60-81
+  s_121aef358488c8::t_57805d7476cfe7 42,44-52,54-56,59
+  s_121aef358488c8::t_04feafb4d36e8a 36
+  s_121aef358488c8::t_1682fe763a7b3b 53
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-169
+04-in-situ/tasks/repo-status-json/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-169
+03-ablation/versions/description-only/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_c603a1657c7d1a 1-158
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_c603a1657c7d1a 1-158
+06-regression/versions/baseline/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_222ddf1ad8d73b 1-29
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_c603a1657c7d1a 1-158
+04-in-situ/tasks/empty-status-unknown/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-119
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-14
+04-in-situ/tasks/empty-status-json/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+03-ablation/versions/no-cycle/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+04-in-situ/tasks/repo-resolve-namespace/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-122
+04-in-situ/tasks/empty-resolve-namespace/task.md
+  s_121aef358488c8::t_2d4736504d6510 1-3
+03-ablation/versions/no-rules/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_7aaa89ec77fd85 1-22
+04-in-situ/tasks/empty-resolve-namespace/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_62f6d749ddb7f6 1-72
+04-in-situ/tasks/linkbox/test/expiry.test.js
+  s_121aef358488c8::t_2d4736504d6510 1-32
+04-in-situ/tasks/empty-remaining-command/criteria.json
+  s_121aef358488c8::t_42de1b2f877721 2,7
+  s_121aef358488c8::t_2d4736504d6510 1,3-6,8-31
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-122
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-285
+03-ablation/arms.json
+  s_121aef358488c8::t_7aaa89ec77fd85 1-116
+04-in-situ/tasks/repo-remaining-command/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+04-in-situ/tasks/empty-status-json/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1,3-6,8-31
+  s_121aef358488c8::t_42de1b2f877721 2,7
+03-ablation/versions/no-done-check/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+06-regression/versions/reworded/sdlc-implementation/skills/test-driven-development/SKILL.md
+  s_121aef358488c8::t_222ddf1ad8d73b 1-29
+03-ablation/versions/no-rules/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-198
+06-regression/versions/reworded/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-122
+03-ablation/versions/full/sdlc-implementation/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_62f6d749ddb7f6 1-7
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-115
+06-regression/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-285
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+04-in-situ/arms.json
+  s_121aef358488c8::t_94805be7290449 1-25
+04-in-situ/tasks/repo-status-unknown/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1-31
+04-in-situ/tasks/empty/package.json
+  s_121aef358488c8::t_2d4736504d6510 1-8
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/references/defense-in-depth.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-122
+04-in-situ/tasks/empty-status-unknown/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_c603a1657c7d1a 1-72
+04-in-situ/tasks/repo-status-unknown/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+03-ablation/versions/no-rules/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+06-regression/versions/old-description/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-198
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/test-pressure-1.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-58
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/SKILL.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-285
+05-compare/arms.json
+  s_121aef358488c8::t_de8a299a00d7b3 30,32,51,53
+  s_121aef358488c8::t_b90f3a31382b57 1-29,31,33-50,52,54-137
+03-ablation/versions/no-cycle/sdlc-implementation/skills/systematic-debugging/CREATION-LOG.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-119
+06-regression/versions/old-description/sdlc-implementation/skills/systematic-debugging/test-academic.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-14
+06-regression/versions/no-cycle/sdlc-implementation/skills/test-driven-development/references/writing-good-tests.md
+  s_121aef358488c8::t_c603a1657c7d1a 1-198
+03-ablation/versions/full/sdlc-implementation/skills/systematic-debugging/references/root-cause-tracing.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-169
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/test-pressure-2.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-68
+03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+04-in-situ/tasks/empty-fractional-ttl/criteria.json
+  s_121aef358488c8::t_2d4736504d6510 1,3-6,8-31
+  s_121aef358488c8::t_42de1b2f877721 2,7
+03-ablation/versions/no-done-check/sdlc-implementation/skills/systematic-debugging/references/condition-based-waiting-example.ts
+  s_121aef358488c8::t_62f6d749ddb7f6 1-158
+04-in-situ/tasks/empty-status-json/setup.sh
+  s_121aef358488c8::t_2d4736504d6510 1-30
+03-ablation/versions/description-only/sdlc-implementation/skills/systematic-debugging/test-pressure-3.md
+  s_121aef358488c8::t_62f6d749ddb7f6 1-69
+06-regression/versions/baseline/sdlc-implementation/skills/systematic-debugging/references/find-polluter.sh
+  s_121aef358488c8::t_c603a1657c7d1a 1-72
+04-in-situ/tasks/repo-resolve-namespace/scenario.json
+  s_121aef358488c8::t_2d4736504d6510 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "497806695bc61121a8d2c22320b808ba81048c0d",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
