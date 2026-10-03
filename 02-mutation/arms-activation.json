@@ -1,0 +1,21 @@
+[
+  {
+    "label": "current-stubbed",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/current-stubbed/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  }
+]
