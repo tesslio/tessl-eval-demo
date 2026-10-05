@@ -29,9 +29,9 @@ All graded by Sonnet 4.6.
 | tessl, Sonnet 4.6 | 66.0 | 77.3 | +11 | 5 | not reported |
 | claude, Haiku 4.5 | 50.7 | 54.7 | +4 | 0 | 0 |
 
-- **The stronger the model, the more it gets from the skill.** Opus 5 loaded the skill in every run and saw the test fail first in every run. Haiku 4.5 never loaded any skill, so for Haiku the skills changed nothing.
+- **Opus 5 gained the most in this test.** Its arms ran in a separate eval run, so compare it to the other rows with care. Opus 5 loaded the skill in every run and saw the test fail first in every run. Haiku 4.5 never loaded any skill, so for Haiku the skills changed nothing.
 - **Without the skills, every setup scores about the same.** 65 to 70 for all but Haiku: the code is correct and tested, but no setup ran the test before writing the code. The rule the skill teaches is the difference.
-- **The agent matters as well as the model.** With the same model, the `claude` agent gained 19 points and the `tessl` agent 11. The `codex` agent with its own model gained 20.
+- **The two agents with the same model are too close to call.** With Sonnet 4.6, the `claude` agent gained 19 points and the `tessl` agent 11. Step 01 showed that 15 cells per arm can only detect a difference of about 13 points, so this gap can be chance. The `codex` agent with its own model gained 20.
 - **Not every agent reports which skills it loaded.** For `codex` and `tessl` the eval records scores, but not loading, so a low gain there cannot be split into "did not load" and "did not follow".
 - **Cost goes up with the skill.** With the skills, Opus 5 cost about four and a half times as much per run as without, because it follows the whole workflow: in every run it also loaded the verification and both code review skills. Sonnet 4.6 cost about three times as much.
 

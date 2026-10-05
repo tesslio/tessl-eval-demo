@@ -30,7 +30,7 @@ Claude Sonnet 4.6 as agent and grader.
 
 The same skill and model in earlier runs, 15 cells each:
 
-- **mean score:** 84.0 to 98.0 over eight runs.
+- **mean score:** 84.0 to 98.0 over seven runs.
 - **test seen failing first:** 8 to 14 of 15 over the same runs.
 
 What this shows:

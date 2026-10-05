@@ -12,7 +12,7 @@ Step 01 found that `test-driven-development` loads, and the agent then writes go
 2. **Write a few versions, each testing one idea about the broken rule.** Change only the body. Keep the name and description the same in every arm, so loading is equal and only the instructions differ:
    - **checklist first:** a three-step gate at the very top: write the test, run it and see it fail, only then open the production file.
    - **record red:** quote the failing output before editing, and again in the final reply under "Red:".
-   - **short:** the same rules in 29 lines instead of 328, with the long tables of excuses and examples removed.
+   - **short:** the same rules in 29 lines instead of 320, with the long tables of excuses and examples removed.
    - **action order:** "your first edit is a test file; your next command runs the tests".
 3. **Run every version against the current body on the step 01 tasks and rubric,** 3 runs each: 5 arms, 5 tasks, 75 cells, scored. Step 01 showed that 15 cells per arm sees a difference of about 13 points.
 

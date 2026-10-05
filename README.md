@@ -11,9 +11,9 @@ Each step answers one question about one kind of eval run. Most steps use one sk
 1. **[00: Activation](00-activation-testing/)**: does the agent use each skill when it should, and leave it alone when it should not?
    *Status:* method written up, with one worked example: the router now loads on 11 of 15 everyday and easy-to-miss requests, against 2 of 15 before, with no wrong loads.
 2. **[01: Variability](01-variability/)**: run the same eval again with nothing changed. How much does the score move, and how many runs does a comparison need?
-   *Status:* done. Scores move by 12 points per run; five tasks at three runs each sees a difference of about 13 points.
+   *Status:* done. One task run can score 12 points above or below the average (one standard deviation); five tasks at three runs each sees a difference of about 13 points.
 3. **[02: Mutation](02-mutation/)**: hold the tasks fixed and try versions of a skill's instructions. Which version does the job better?
-   *Status:* done. A 29-line version of the skill beat the 328-line original in two runs, by 21 and 12 points; the agent runs the new test and sees it fail first in about two runs of three, against fewer than one in seven.
+   *Status:* done. A 29-line version of the skill beat the 320-line original in two runs, by 21 and 12 points; the agent runs the new test and sees it fail first in about two runs of three, against fewer than one in seven.
 4. **[03: Ablation](03-ablation/)**: remove one part of a skill at a time and measure what drops. Which parts matter?
    *Status:* done. The five-step cycle carries the skill: without it the score drops by about 14 points, and the cycle alone scores within a point of the whole skill.
 5. **[04: In situ](04-in-situ/)**: run the skill in an empty project and in a real codebase. Does it help more or less where the work is real?

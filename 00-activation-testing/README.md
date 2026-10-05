@@ -44,7 +44,7 @@ Work on one skill at a time. For each skill:
 
 ## What it costs
 
-Each eval cell (one scenario, one version, one run) is billed the same, whether it runs for a minute or an hour. So the cost is the number of cells: versions times scenarios times runs. The ladder keeps that low: about 20 scenarios per skill, one run each until the final check, and at most three rewrites at a time.
+The cost of an eval grows with the number of cells (one scenario, one version, one run): versions times scenarios times runs. Credits are described at https://tessl.io/pricing/. The ladder keeps that low: about 20 scenarios per skill, one run each until the final check, and at most three rewrites at a time.
 
 - A skill whose ladder shows nothing to fix: about 20 cells.
 - A skill that needs a fix: about 180 to 220 cells.

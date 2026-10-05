@@ -4,7 +4,7 @@
 
 ## The problem
 
-Step 02 cut `test-driven-development` from 328 lines to 29 and the score went up. Most of the original did nothing measurable, or got in the way. The 29 lines are now the skill, but nobody has shown that each of them earns its place. A part that does nothing still costs the reader time and the agent context, and it makes the next edit harder to judge.
+Step 02 cut `test-driven-development` from 320 lines to 29 and the score went up. Most of the original did nothing measurable, or got in the way. The 29 lines are now the skill, but nobody has shown that each of them earns its place. A part that does nothing still costs the reader time and the agent context, and it makes the next edit harder to judge.
 
 ## The approach
 
