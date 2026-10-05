@@ -1,0 +1,137 @@
+00-activation-testing/delivery-flow/heldout/heldout-borderline/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+03-ablation/README.md
+  s_121aef358488c8::t_1f429700560e73 70
+00-activation-testing/delivery-flow/ladder/normal-2/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/obvious-2/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/heldout/heldout-borderline/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/tasks/ticket-then-merge/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/ladder/normal-2/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/neighbors/nb-receiving-code-review/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/arms.json
+  s_121aef358488c8::t_17a422dfa47458 1-40
+00-activation-testing/delivery-flow/ladder/obvious-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+04-in-situ/README.md
+  s_121aef358488c8::t_74f66c8f6982ab 3,7,17,28
+00-activation-testing/delivery-flow/ladder/named-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/borderline-skip-2/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/stubbed/after/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_1db7bc8e314389 1-7
+05-compare/README.md
+  s_121aef358488c8::t_4e6acb4a3b6f94 32-33
+  s_121aef358488c8::t_3f88ae57cf5e34 15,18,27,29,37,49,56
+00-activation-testing/delivery-flow/heldout/heldout-normal/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+01-variability/README.md
+  s_121aef358488c8::t_1f429700560e73 37-38
+  s_121aef358488c8::t_10b37047207764 63-72
+00-activation-testing/delivery-flow/ladder/borderline-load-2/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/stubbed/before/sdlc-router/.tessl-plugin/plugin.json
+  s_121aef358488c8::t_1db7bc8e314389 1-7
+00-activation-testing/delivery-flow/ladder/borderline-skip-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/stubbed/before/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_17a422dfa47458 1-5
+00-activation-testing/delivery-flow/neighbors/nb-finishing/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/tasks/review-fixes-resolve/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/README.md
+  s_121aef358488c8::t_00707a72cf01be 63,69
+  s_121aef358488c8::t_17a422dfa47458 64
+00-activation-testing/before/plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md
+  s_121aef358488c8::t_61a8b193451f50 3
+00-activation-testing/before/plugins/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_61a8b193451f50 3,16
+00-activation-testing/delivery-flow/ladder/obvious-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/neighbors/nb-systematic-debugging/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+README.md
+  s_121aef358488c8::t_d0925ed450bc5a 30-31,46,49,54-66
+  s_121aef358488c8::t_1db7bc8e314389 19-20,34
+00-activation-testing/delivery-flow/ladder/borderline-load-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/borderline-skip-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/obvious-2/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/named-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+NOTICE
+  s_121aef358488c8::t_4e6acb4a3b6f94 35-44,48
+00-activation-testing/delivery-flow/heldout/heldout-normal/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/neighbors/nb-executing-plans/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/tasks/ticket-then-merge/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/tasks/review-fixes-status/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/neighbors/nb-receiving-code-review/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/ladder/normal-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/neighbors/nb-finishing/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/ladder/borderline-load-2/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/tasks/review-fixes-status/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/should-not-2/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/before/README.md
+  s_121aef358488c8::t_61a8b193451f50 3
+00-activation-testing/delivery-flow/ladder/borderline-skip-2/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/normal-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/README.md
+  s_121aef358488c8::t_17a422dfa47458 98,114,124,130
+00-activation-testing/delivery-flow/ladder/should-not-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/normal-3/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/neighbors/nb-systematic-debugging/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/should-not-1/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/should-not-2/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/stubbed/after/sdlc-router/skills/delivery-flow/SKILL.md
+  s_121aef358488c8::t_17a422dfa47458 1-5
+00-activation-testing/delivery-flow/tasks/review-fixes-resolve/criteria.json
+  s_121aef358488c8::t_61ce84151cca76 2
+00-activation-testing/delivery-flow/neighbors/nb-executing-plans/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+00-activation-testing/delivery-flow/ladder/borderline-load-1/criteria.json
+  s_121aef358488c8::t_da359a4597d772 2
+00-activation-testing/delivery-flow/ladder/normal-3/setup.sh
+  s_121aef358488c8::t_da359a4597d772 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2afbcb342fb8c06750e726766f484ce49ef0e190",
+  "prompts": {},
+  "sessions": {
+    "s_121aef358488c8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "054d443a-35c3-4732-be3d-f0a54ffe31dc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Doogal <doogal@tessl.io>"
+    }
+  }
+}
