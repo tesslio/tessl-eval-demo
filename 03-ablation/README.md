@@ -67,4 +67,4 @@ tessl eval view <run-id> --json | jq -r '.data.attributes.scenarios[].solutions[
 
 ## What's next
 
-Step 04, in situ, runs the skill in a real codebase as well as in the small one used so far, to see whether the gain holds where the work is real.
+Step 04, in situ, runs the same tasks in linkbox and in an empty project, to see whether the gain depends on having existing code to change.

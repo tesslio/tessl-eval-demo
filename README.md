@@ -16,8 +16,8 @@ Each step answers one question about one kind of eval run. Most steps use one sk
    *Status:* done. A 29-line version of the skill beat the 320-line original in two runs, by 21 and 12 points; the agent runs the new test and sees it fail first in about two runs of three, against fewer than one in seven.
 4. **[03: Ablation](03-ablation/)**: remove one part of a skill at a time and measure what drops. Which parts matter?
    *Status:* done. The five-step cycle carries the skill: without it the score drops by about 14 points, and the cycle alone scores within a point of the whole skill.
-5. **[04: In situ](04-in-situ/)**: run the skill in an empty project and in a real codebase. Does it help more or less where the work is real?
-   *Status:* done. The skills add about 31 points in the codebase and about 10 in an empty project. The skill works as well in both places when it loads, but in the empty project it loads in only a third of runs.
+5. **[04: In situ](04-in-situ/)**: run the skill in an empty project and in an existing codebase. Does it help more or less where there is code to change?
+   *Status:* done. In one run, the skills added 27 points in the codebase and 12 in an empty project. The skill works as well in both places when it loads, but in the empty project it loads in only a third of runs.
 6. **[05: Model, agent and judge comparison](05-compare/)**: which models and coding agents get the most out of the skill, and does the grading model change the verdict?
    *Status:* done. Opus 5 gains 29 points from the skills, Sonnet 4.6 19, Haiku 4.5 4 (it never loads them). Three graders gave results inside the agent's own run-to-run spread.
 7. **[06: Regression](06-regression/)**: a fixed set of tasks that catches a later change that makes the skill worse.
@@ -27,9 +27,11 @@ Each step answers one question about one kind of eval run. Most steps use one sk
 
 - **A task** is what a user would type, for example "Get rid of that experiment branch." A setup script builds the starting state first: git history, branches, a failing test.
 - **A rubric** lists what a good result looks like, item by item. A second model scores each run against it.
-- **A version** is one configuration of the skills, for example the old and the new text of one skill. Every version runs every task.
+- **A version** is one configuration of the skills, for example the old and the new text of one skill. Every version runs every task. The `arms.json` files call each version an arm, and the `tessl eval` CLI and its JSON output call it a variant; all three words mean the same thing here.
+- **A cell** is one task, run once, with one version. Cost and sample size are both counted in cells: versions times tasks times runs.
 - **Repetition:** agents vary from run to run, so each task runs several times per version. Versions are compared only inside one run, because results also move from day to day.
 - **What is recorded:** each run keeps the score, the rubric reasons, and which skills the agent loaded.
+- **The skill hint:** by default, `tessl eval run` adds a short section to the prompt of every arm that installs skills: "One or more skills should be available to help with this task. You must use them if needed." The `forceContextActivation` field in the arms files keeps that default. Arms with no skills never get the hint. So a gain over no skills, in steps 04 and 05, is the gain from the skills together with the hint, and loading rates here may be higher than without it. `--skip-forced-context-activation` turns the hint off for a whole run.
 
 ## What is in the repository
 
@@ -41,12 +43,24 @@ The eval run pages behind these results are private to the workspace that ran th
 
 ## Getting started
 
-You need the Tessl CLI and an account. Eval runs use credits; see https://tessl.io/pricing/. Each step's write-up says how many task runs it needs.
+You need the Tessl CLI and an account. Eval runs use credits; see https://tessl.io/pricing/. Each step's write-up says how many cells it needs.
 
 ```bash
-curl -fsSL https://install.tessl.io | sh
+curl -fsSL https://get.tessl.io | sh
 tessl login
 tessl project create --workspace <your-workspace>
 ```
 
-Then open a step's directory and follow its README.
+Run every command from the root of this repository: the `arms.json` files point at their plugins by paths from the root.
+
+A small first run, 5 cells: the step 01 tasks, once each, with the skills installed.
+
+```bash
+tessl eval run 01-variability/tasks \
+  --variant-json 01-variability/arms.json \
+  --agent claude --model claude-sonnet-4-6 \
+  --scorer-agent claude --scorer-model claude-sonnet-4-6 \
+  -n 1 -f --yes --label first-run
+```
+
+Then read a step's README and run its commands.

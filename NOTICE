@@ -32,10 +32,18 @@ are derived from Superpowers, an agentic skills framework by Jesse Vincent
 
 They have been modified for this demo: the plugins were renamed to the
 `demo/sdlc-*` set, the plan-output path convention was genericised, and
-references to the upstream project name were removed from prose. The skill
-instructions themselves are substantially the upstream content.
+references to the upstream project name were removed from prose. Most skill
+instructions are substantially the upstream content. The exceptions are the
+descriptions changed in step 00, and `test-driven-development`, whose body
+was rewritten in step 02.
+
+Some upstream material is kept unchanged inside the skills, although no step
+uses it: the `test-pressure-*.md`, `test-academic.md` and `CREATION-LOG.md`
+files and the `references/` examples under `systematic-debugging`. They are
+upstream's own tests and notes for that skill, and may refer to upstream
+projects and paths.
 
 Everything else in this repository — the `linkbox` toy codebase under
 `codebase/linkbox/`, the eval scenarios and their rubrics, the arms files, the
-scripts, and the documentation — is original and covered by the LICENSE file
+setup scripts, and the documentation — is original and covered by the LICENSE file
 in this directory.

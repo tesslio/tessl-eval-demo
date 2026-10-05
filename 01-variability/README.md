@@ -34,8 +34,8 @@ All four plugins installed, as a user would have them, so the router decides whe
 | resolve-namespace | 75.0 | 70 to 100 | 9 of 10 |
 | **All** | **71.5** | standard deviation 12.0 | 29 of 50 |
 
-- **The score is mostly one decision.** Nearly every run gets the behavior, the test and the final green run right, and scores 70. The runs that score 100 are the few (5 of 48) where the agent ran the new test and saw it fail before writing the code.
-- **Loading varies as much as scores.** On `fractional-ttl` the skill loaded in 10 of 10 runs in a first run of this step, and in 1 of 10 in the second. Same arm, same task, one day apart.
+- **The score is mostly one decision.** Nearly every run gets the behavior, the test and the final green run right, and scores 70. The runs that score 100 are the few (5 of the 48 scored runs; 2 runs returned no score) where the agent ran the new test and saw it fail before writing the code.
+- **Loading varies as much as scores.** On `fractional-ttl` the skill loaded in 10 of 10 runs in a first run of this step, and in 1 of 10 in the second, one day later, with the same skills and task. Between the two runs the codebase README gained one line about `npm test` and the rubric changed (see below); neither touches the skill or its description.
 - **The skill helps a little, when it loads.** Mean 73.4 with it loaded, 68.4 without.
 
 ### How many runs a comparison needs
@@ -59,6 +59,16 @@ The first run of this step used the same tasks, without two fixes, and its numbe
 - **The fixes:** the codebase README now says to run the suite with `npm test`, as a real project's README would, and the rubric gives a fixed score when the log is missing. In the second run the log was missing in 5 cells instead of most, and the grader scored every missing log the same way.
 
 Write the grading rules for missing evidence before the first run. A rubric that leaves partial marks to the grader adds noise you then cannot separate from the agent's.
+
+## Limits of the rubric
+
+All later steps use this rubric, so its gaps apply to them too:
+
+- **"Test seen failing first" checks one file.** For the linkbox tasks it checks that `src/cli.js` was unchanged at the failing run. A fix made first in `src/expiry.js` or `src/store.js` would still get full marks. A stricter version would compare every `src/` hash in the log line.
+- **In the empty project (step 04), a missing module counts as a failing test.** The skill itself says a test must fail because the behavior is missing, not because of a missing import.
+- **One task gives away the cause.** The `resolve-namespace` request says that `resolve` "checks expiry before it checks that the namespace holds the code", so that task tests the fix more than the diagnosis.
+
+The results were graded with the rubric as it is here. Fixing these gaps would change scores for every step, so it needs a full rerun.
 
 ## What it costs
 

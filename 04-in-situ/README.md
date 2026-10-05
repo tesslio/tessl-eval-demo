@@ -1,10 +1,10 @@
 # Step 04: in situ
 
-**The question:** does a skill help as much in an empty project as in a real codebase, or more, or less?
+**The question:** does a skill help as much in an empty project as in an existing codebase, or more, or less?
 
 ## The problem
 
-A skill is often tried out in an empty directory: ask for a small function, see what the agent does. Users then run it in a codebase with code, tests and a README. The two can give different answers. An eval run only in an empty project can show a skill as weak when it works in real code, or the other way round.
+A skill is often tried out in an empty directory: ask for a small function, see what the agent does. Users then run it in a codebase with code, tests and a README. The two can give different answers. An eval run only in an empty project can show a skill as weak when it works in a codebase, or the other way round. linkbox is small (three source files and two test files), but it has code, tests and a README, which is what this step needs.
 
 ## The approach
 
@@ -14,7 +14,7 @@ A skill is often tried out in an empty directory: ask for a small function, see 
 2. **Use the same rubric in both places.** For the empty project, "red first" means a failing test run before the module exists, or before its final version.
 3. **Run with and without the skills.** Two arms: the four plugins from [`skills/`](../skills/), and no plugins. 10 tasks, 2 arms, 3 runs each: 60 cells, scored.
 4. **Compare the gain from the skills in each place,** not the raw scores: the tasks in the two places are not equally hard.
-5. **Repeat the skills arm** in a second run, 30 cells, to check the result inside one run.
+5. **Repeat the skills arm** in a second run, 30 cells, to check that loading differs between the two places again. Gains are read from the first run only, which has both arms.
 
 ## Results
 
@@ -25,7 +25,7 @@ Claude Sonnet 4.6 as agent and grader.
 | linkbox | 62.7 | 89.3 | 98.0 | 10, 14 | 11, 14 |
 | empty project | 59.3 | 71.3 | 66.7 | 5, 5 | 5, 5 |
 
-- **The skills help much less in the empty project.** The gain is about 31 points in linkbox and about 10 in the empty project.
+- **The skills help much less in the empty project.** In the first run, which has both arms, the gain is 27 points in linkbox (62.7 to 89.3) and 12 in the empty project (59.3 to 71.3). The second run repeated only the skills arm, and its scores point the same way.
 - **The cause is loading, not the skill.** When `test-driven-development` loaded in the empty project, all 10 of those runs scored 100, the same as in linkbox. It loaded in 10 of 30 empty-project runs and in 25 of 30 linkbox runs. In most empty-project runs no skill loaded at all.
 - **On some empty-project tasks the agent wrote no test at all,** with or without the skills. A likely reason, not tested here: a request such as "Write `src/status.js` exporting `status(...)`" reads as a few lines to write, not as a change to a project.
 - **Without skills, no run saw a test fail first,** in either place.

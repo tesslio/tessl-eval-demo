@@ -49,8 +49,6 @@ The cost of an eval grows with the number of cells (one scenario, one version, o
 - A skill whose ladder shows nothing to fix: about 20 cells.
 - A skill that needs a fix: about 180 to 220 cells.
 
-Credits are described at https://tessl.io/pricing/.
-
 ## Run it yourself
 
 You need the Tessl CLI and an account (see the [top-level README](../README.md)). The commands below check one skill.
@@ -97,7 +95,7 @@ PY
 
 ```bash
 tessl eval lint ladder
-tessl eval run ladder --arms-json arms.json --agent claude --model claude-sonnet-4-6 \
+tessl eval run ladder --variant-json arms.json --agent claude --model claude-sonnet-4-6 \
   --scorer-agent claude --scorer-model claude-sonnet-4-6 -n 1 --skip-scoring -f --yes --label ladder-check
 ```
 
@@ -113,7 +111,7 @@ tessl eval view <run-id> --json | jq -r '.data.attributes.scenarios[]
 
 Compare each line with the scenario's expected result in `expectations.json`.
 
-**6. Confirm** with `-n 3` on `ladder/` and `heldout/`. Run `neighbors/` with the neighbors' bodies stubbed and your skill's body real. Run `tasks/` without `--skip-scoring`, with no bodies stubbed, so the full tasks are scored.
+**6. Confirm** with `-n 3` on `ladder/` and `heldout/`. [`delivery-flow/arms.json`](delivery-flow/arms.json) is a ready example: the old and new router descriptions, each with its body stubbed (run it from the repo root, for example `tessl eval run 00-activation-testing/delivery-flow/heldout --variant-json 00-activation-testing/delivery-flow/arms.json ...`). Run `neighbors/` with the neighbors' bodies stubbed and your skill's body real. Run `tasks/` without `--skip-scoring`, with no bodies stubbed, so the full tasks are scored.
 
 ## A second example: test-driven-development
 
@@ -123,12 +121,12 @@ The fix is a shorter description without that sentence (307 characters instead o
 
 > Implements a feature or bug fix test-first: write one failing test, run it and watch it fail, write the minimal code to pass, then refactor with the tests green. Use when a change alters code behavior: a new feature, a bug fix, or a behavior change, whether the request comes alone or through delivery-flow.
 
-With the body replaced by a stop line, the skill then loaded in 13 of 14 runs on the step 01 tasks (15 cells). This check is lighter than the full ladder above: it uses the five feature and bug-fix tasks only, with no requests the skill should stay out of. The change is applied as the first part of [step 02](../02-mutation/), and `arms-activation.json` there reruns the check.
+With the body replaced by a stop line, the skill then loaded in 13 of 14 runs on the step 01 tasks (15 cells; one returned no loading data). This check is lighter than the full ladder above: it uses the five feature and bug-fix tasks only, with no requests the skill should stay out of. The change is applied as the first part of [step 02](../02-mutation/), and `arms-activation.json` there reruns the check.
 
 A shorter description is safer as well as clearer. In another skill set, a description rewritten to about 800 characters stopped a neighboring skill from loading on its own requests; the original wording padded to the same length did the same, so the cause was the length, not the words. Keep descriptions short, and run the neighbor checks when one grows.
 
 ## In this directory
 
-- **[`before/`](before/)**: the skills as this step found them.
+- **[`before/`](before/)**: the skills as measured at the start of the worked example.
 - **[`after/`](after/)**: the skills with every confirmed change applied.
 - **[`delivery-flow/`](delivery-flow/)**: a worked example: one skill's ladder, its scenarios, the rewrites tried, and how the change in `after/` was reached and proven.

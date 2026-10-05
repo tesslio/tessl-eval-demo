@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Verify tests pass, then present the integration options for a finished branch — merge locally, push and open a pull request, or keep it as-is — execute the choice, and clean up the worktree safely. This is the internal integration stage of the delivery-flow workflow. Use it only after implementation is verified and only when the user has authorized an integration decision, for example by saying "finish this branch", "merge my work", or "open a PR" — never activate it directly for an unrelated standalone request.
+description: "Use when the user wants to finish a development branch or asks what to do with finished work (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree), and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation."
 ---
 
 # Finishing a Development Branch
