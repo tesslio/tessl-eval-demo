@@ -9,7 +9,7 @@ are derived from Superpowers, an agentic skills framework by Jesse Vincent
     Licensed under the MIT License.
 
 They have been modified for this demo: the plugins were renamed to the
-`tessleng/sdlc-*` set, the plan-output path convention was genericised, and
+`demo/sdlc-*` set, the plan-output path convention was genericised, and
 references to the upstream project name were removed from prose. The skill
 instructions themselves are substantially the upstream content.
 

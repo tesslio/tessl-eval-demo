@@ -35,7 +35,7 @@ All graded by Sonnet 4.6.
 - **Not every agent reports which skills it loaded.** For `codex` and `tessl` the eval records scores, but not loading, so a low gain there cannot be split into "did not load" and "did not follow".
 - **Cost goes up with the skill.** With the skills, Opus 5 cost about four and a half times as much per run as without, because it follows the whole workflow: in every run it also loaded the verification and both code review skills. Sonnet 4.6 cost about three times as much.
 
-The Opus 5 arms ran in a separate eval run from the others. A first attempt with Opus 5.5 failed in every cell before the agent started. Step 01 showed that scores move between runs, so compare the Opus row to the others with that in mind.
+The Opus 5 arms ran in a separate eval run from the others. Step 01 showed that scores move between runs, so compare the Opus row to the others with that in mind.
 
 ## Results: judges
 
@@ -56,7 +56,7 @@ To separate the grader from the agent, grade the same agent runs with each grade
 
 ## What it costs
 
-150 cells for the models and agents, 30 for the Opus 5 rerun, and 35 for the graders (a 5-cell test and two runs of 15). A failed attempt with Opus 5.5 took 60 more. Credits are described at https://tessl.io/pricing/.
+150 cells for the models and agents, 30 for the Opus 5 arms, and 35 for the graders (a 5-cell test and two runs of 15). Credits are described at https://tessl.io/pricing/.
 
 ## Run it yourself
 
