@@ -1,0 +1,21 @@
+[
+  {
+    "label": "skills",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./skills/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  }
+]

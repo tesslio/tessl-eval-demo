@@ -1,0 +1,31 @@
+{
+  "context": "What you can see: REPLY.md at the repo root (the agent's reply to the user), and the repository as the agent left it, including .git. You cannot see the conversation or the commands. Every `npm test` run appended one line to .git/test-runs.log: time, exit code, failing-test count, short HEAD, a 10-character hash of each src/*.js file (named by file; a file that does not exist yet has no entry), a hash of all test/*.js files together (test=), and the arguments. A missing log line does not prove a run did not happen (the agent may have run `node --test` directly). When test-runs.log is missing, or has no run after the new test was written, follow the fixed scores in R1 and R4; do not award partial marks in any other way. Starting state: an empty project on branch main, HEAD a676db2, with no src/ or test/ files, test=e69de29bb2. The request: Write `src/ttl.js` exporting `parseTtl(text)`. It takes the value of a `--ttl-ms` option as a string and returns it as a number of milliseconds. A ttl must be a whole positive number: throw an error for anything else, such as `0`, `-5`, `1.5` or `abc`.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "R1_red_first",
+      "description": "A test exists, and test-runs.log has a run with exit=1, a test hash other than the starting one, and either no entry for ttl or a ttl hash other than the final one: the test was seen failing before the production code was written: 3. If the log has no run with the new test before the production code, score 1 when REPLY.md says the test was run and seen failing before the code was written, otherwise 0. A test first run after the production code, with no such statement, scores 0.",
+      "max_score": 3
+    },
+    {
+      "name": "R2_test_targets_behavior",
+      "description": "The test asserts the requested behavior itself, so it would fail without the code for the reason the request gives, not only because the file or export is missing.",
+      "max_score": 2
+    },
+    {
+      "name": "R3_behavior_correct",
+      "description": "The final code does what was asked: `parseTtl` returns the number for whole positive values such as `\"1000\"`, and throws for `0`, negative numbers, non-integers such as `1.5`, and non-numbers.",
+      "max_score": 2
+    },
+    {
+      "name": "R4_green_last",
+      "description": "The last line of test-runs.log is exit=0 with the src hashes of the final files, so the full suite passed after the last production change: 2. If test-runs.log is missing or its last run is before the last production change: 1 when REPLY.md cites a passing run of the full suite, otherwise 0.",
+      "max_score": 2
+    },
+    {
+      "name": "R5_minimal",
+      "description": "The code is limited to what the request needs: `src/ttl.js`, its test, and no extra exports, options or files.",
+      "max_score": 1
+    }
+  ]
+}

@@ -1,19 +1,49 @@
 Third-party attribution
 =======================
 
-The skills under `plugins/` are derived from Superpowers, an agentic skills
-framework by Jesse Vincent (obra), used here as a toy example of a skill set
-worth measuring.
+The skills under `skills/`, and the copies of them in the step directories,
+are derived from Superpowers, an agentic skills framework by Jesse Vincent
+(obra), used here as a toy example of a skill set worth measuring.
 
     Superpowers — https://github.com/obra/superpowers
-    Licensed under the MIT License.
+    Licensed under the MIT License:
+
+    MIT License
+
+    Copyright (c) 2025 Jesse Vincent
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
 
 They have been modified for this demo: the plugins were renamed to the
-`tessleng/sdlc-*` set, the plan-output path convention was genericised, and
-references to the upstream project name were removed from prose. The skill
-instructions themselves are substantially the upstream content.
+`demo/sdlc-*` set, the plan-output path convention was genericised, and
+references to the upstream project name were removed from prose. Most skill
+instructions are substantially the upstream content. The exceptions are the
+descriptions changed in step 00, and `test-driven-development`, whose body
+was rewritten in step 02.
+
+Some upstream material is kept unchanged inside the skills, although no step
+uses it: the `test-pressure-*.md`, `test-academic.md` and `CREATION-LOG.md`
+files and the `references/` examples under `systematic-debugging`. They are
+upstream's own tests and notes for that skill, and may refer to upstream
+projects and paths.
 
 Everything else in this repository — the `linkbox` toy codebase under
-`scenarios/repo/`, the eval scenarios and their rubrics, the arms files, the
-scripts, and the documentation — is original and covered by the LICENSE file
+`codebase/linkbox/`, the eval scenarios and their rubrics, the arms files, the
+setup scripts, and the documentation — is original and covered by the LICENSE file
 in this directory.

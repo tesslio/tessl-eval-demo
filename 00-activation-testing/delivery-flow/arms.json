@@ -1,0 +1,40 @@
+[
+  {
+    "label": "before",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/before/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./00-activation-testing/before/plugins/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/before/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/delivery-flow/stubbed/before/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "after",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/delivery-flow/stubbed/after/sdlc-router"
+      }
+    }
+  }
+]

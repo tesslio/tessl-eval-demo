@@ -1,0 +1,78 @@
+[
+  {
+    "label": "baseline",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./06-regression/versions/baseline/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "old-description",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./06-regression/versions/old-description/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "no-cycle",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./06-regression/versions/no-cycle/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "reworded",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./skills/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./06-regression/versions/reworded/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./skills/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./skills/sdlc-router"
+      }
+    }
+  }
+]

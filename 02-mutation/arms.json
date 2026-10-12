@@ -1,0 +1,97 @@
+[
+  {
+    "label": "current",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/current/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "checklist-first",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/checklist-first/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "record-red",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/record-red/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "short",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/short/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  },
+  {
+    "label": "action-order",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-assurance": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-assurance"
+      },
+      "sdlc-implementation": {
+        "localPath": "./02-mutation/versions/action-order/sdlc-implementation"
+      },
+      "sdlc-planning": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-planning"
+      },
+      "sdlc-router": {
+        "localPath": "./00-activation-testing/after/plugins/sdlc-router"
+      }
+    }
+  }
+]

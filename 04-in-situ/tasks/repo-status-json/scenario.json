@@ -1,0 +1,12 @@
+{
+  "fixtures": {
+    "codebase": {
+      "type": "directory",
+      "path": "../linkbox",
+      "installPath": "."
+    }
+  },
+  "setup": [
+    "./setup.sh"
+  ]
+}

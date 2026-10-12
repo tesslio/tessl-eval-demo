@@ -60,11 +60,13 @@ One neighbor check failed at first: `systematic-debugging` loaded once with the 
 
 **7. The full tasks.** The three scored tasks in [`tasks/`](tasks/) ran once with each description, with every skill body real. 6 cells.
 
+A correction made after these runs: the rubrics for these tasks gave the grader a wrong starting hash for the test files, and the setup did not fix git dates, so the starting HEAD in the rubric did not match. Both are fixed in the files here. A grader with the wrong starting hash could treat an unchanged test as a new one, so the scores above may be too high by up to the points of that item, for both descriptions alike. Treat them as a check that nothing broke, not as a measure of quality.
+
 **Cost:** 159 cells in all.
 
 ## Still open
 
-- **"tests on main are red since this morning, fix pls"** loaded no skill in any of 14 runs, with any description. The request is terse, and the fix is one character.
+- **"tests on main are red since this morning, fix pls"** (`ladder/normal-1`, and the same request in `neighbors/nb-systematic-debugging`) never loaded the router: in 22 runs across every description, the only skill load was `systematic-debugging`, once. The request is terse, and the fix is one character.
 - **"The plan in docs/plans is approved. Implement it."** loads `executing-plans` instead of the router. The plan file itself tells the agent to use `executing-plans`.
 - **"Which of these review comments should we take?"** loads no skill. That is `receiving-code-review`'s job, and it needs its own ladder.
 

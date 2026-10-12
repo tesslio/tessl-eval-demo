@@ -1,0 +1,12 @@
+{
+  "fixtures": {
+    "codebase": {
+      "type": "directory",
+      "path": "../empty",
+      "installPath": "."
+    }
+  },
+  "setup": [
+    "./setup.sh"
+  ]
+}

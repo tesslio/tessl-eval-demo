@@ -8,7 +8,7 @@ An agent decides for itself whether to read a skill, from the skill's name and a
 
 The opposite fails too. A description wide enough loads the skill on requests it has nothing to do with, and its instructions then push the agent the wrong way.
 
-Every later step in this repository improves what a skill says. None of that matters for a skill the agent never loads, so activation comes first.
+Every later step in this repository improves what a skill says. None of it has any effect on a skill the agent never loads, so activation comes first.
 
 ## The approach
 
@@ -44,12 +44,10 @@ Work on one skill at a time. For each skill:
 
 ## What it costs
 
-Each eval cell (one scenario, one version, one run) is billed the same, whether it runs for a minute or an hour. So the cost is the number of cells: versions times scenarios times runs. The ladder keeps that low: about 20 scenarios per skill, one run each until the final check, and at most three rewrites at a time.
+The cost of an eval grows with the number of cells (one scenario, one version, one run): versions times scenarios times runs. Credits are described at https://tessl.io/pricing/. The ladder keeps that low: about 20 scenarios per skill, one run each until the final check, and at most three rewrites at a time.
 
 - A skill whose ladder shows nothing to fix: about 20 cells.
 - A skill that needs a fix: about 180 to 220 cells.
-
-Credits are described at https://tessl.io/pricing/.
 
 ## Run it yourself
 
@@ -97,7 +95,7 @@ PY
 
 ```bash
 tessl eval lint ladder
-tessl eval run ladder --arms-json arms.json --agent claude --model claude-sonnet-4-6 \
+tessl eval run ladder --variant-json arms.json --agent claude --model claude-sonnet-4-6 \
   --scorer-agent claude --scorer-model claude-sonnet-4-6 -n 1 --skip-scoring -f --yes --label ladder-check
 ```
 
@@ -113,10 +111,22 @@ tessl eval view <run-id> --json | jq -r '.data.attributes.scenarios[]
 
 Compare each line with the scenario's expected result in `expectations.json`.
 
-**6. Confirm** with `-n 3` on `ladder/` and `heldout/`. Run `neighbors/` with the neighbors' bodies stubbed and your skill's body real. Run `tasks/` without `--skip-scoring`, with no bodies stubbed, so the full tasks are scored.
+**6. Confirm** with `-n 3` on `ladder/` and `heldout/`. [`delivery-flow/arms.json`](delivery-flow/arms.json) is a ready example: the old and new router descriptions, each with its body stubbed (run it from the repo root, for example `tessl eval run 00-activation-testing/delivery-flow/heldout --variant-json 00-activation-testing/delivery-flow/arms.json ...`). Run `neighbors/` with the neighbors' bodies stubbed and your skill's body real. Run `tasks/` without `--skip-scoring`, with no bodies stubbed, so the full tasks are scored.
+
+## A second example: test-driven-development
+
+Step 01 found that `test-driven-development`, the skill the later steps follow, loaded in only 29 of 50 runs. Its description ended with "Do not activate directly for a standalone request that has not gone through delivery-flow first", so the agent often skipped it unless the router sent it there.
+
+The fix is a shorter description without that sentence (307 characters instead of 484):
+
+> Implements a feature or bug fix test-first: write one failing test, run it and watch it fail, write the minimal code to pass, then refactor with the tests green. Use when a change alters code behavior: a new feature, a bug fix, or a behavior change, whether the request comes alone or through delivery-flow.
+
+With the body replaced by a stop line, the skill then loaded in 13 of 14 runs on the step 01 tasks (15 cells; one returned no loading data). This check is lighter than the full ladder above: it uses the five feature and bug-fix tasks only, with no requests the skill should stay out of. The change is applied as the first part of [step 02](../02-mutation/), and `arms-activation.json` there reruns the check.
+
+A shorter description is safer as well as clearer. In another skill set, a description rewritten to about 800 characters stopped a neighboring skill from loading on its own requests; the original wording padded to the same length did the same, so the cause was the length, not the words. Keep descriptions short, and run the neighbor checks when one grows.
 
 ## In this directory
 
-- **[`before/`](before/)**: the skills as this step found them.
+- **[`before/`](before/)**: the skills as measured at the start of the worked example.
 - **[`after/`](after/)**: the skills with every confirmed change applied.
 - **[`delivery-flow/`](delivery-flow/)**: a worked example: one skill's ladder, its scenarios, the rewrites tried, and how the change in `after/` was reached and proven.

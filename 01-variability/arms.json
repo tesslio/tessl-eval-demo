@@ -1,0 +1,13 @@
+[
+  {
+    "label": "skills",
+    "includeContext": true,
+    "forceContextActivation": true,
+    "fixtures": {
+      "sdlc-planning": { "localPath": "./00-activation-testing/after/plugins/sdlc-planning" },
+      "sdlc-implementation": { "localPath": "./00-activation-testing/after/plugins/sdlc-implementation" },
+      "sdlc-assurance": { "localPath": "./00-activation-testing/after/plugins/sdlc-assurance" },
+      "sdlc-router": { "localPath": "./00-activation-testing/after/plugins/sdlc-router" }
+    }
+  }
+]
