@@ -37,6 +37,7 @@ Each step answers one question about one kind of eval run. Most steps use one sk
 
 - **[`skills/`](skills/)**: the skills as they stand after every step so far, in four plugins: planning, implementation, assurance, and a router (`delivery-flow`) that carries a whole task and hands each stage to the right skill. They are derived from Superpowers (MIT); see `NOTICE`.
 - **[`codebase/linkbox/`](codebase/linkbox/)**: a small multi-tenant URL shortener that every task works on. `tessl eval run` reads a task's codebase only from inside the directory it runs, so each set of tasks carries its own copy of it.
+- **[`first-run.json`](first-run.json)**: one arm with the current skills, for the first run below.
 - **`00-activation-testing/` to `06-regression/`**: one per step, each with a README that gives the question, the method, the result, the cost, and the commands to run it on your own skills.
 
 The eval run pages behind these results are private to the workspace that ran them, so each README states the numbers it reports.
@@ -51,16 +52,20 @@ tessl login
 tessl project create --workspace <your-workspace>
 ```
 
+If you belong to more than one organization, add `--org <name>`. If the CLI says a project for this repository already exists in the workspace, run `tessl project link` instead.
+
 Run every command from the root of this repository: the `arms.json` files point at their plugins by paths from the root.
 
-A small first run, 5 cells: the step 01 tasks, once each, with the skills installed.
+A small first run, 5 cells: the step 01 tasks, once each, with the current skills from [`skills/`](skills/). It took about 6 minutes here; the larger runs in the steps took up to an hour.
 
 ```bash
 tessl eval run 01-variability/tasks \
-  --variant-json 01-variability/arms.json \
+  --variant-json first-run.json \
   --agent claude --model claude-sonnet-4-6 \
   --scorer-agent claude --scorer-model claude-sonnet-4-6 \
   -n 1 -f --yes --label first-run
 ```
+
+The CLI states the cost of a run in credits, not cells; the READMEs count cells because that is what you choose when you plan a run. Credits are described at https://tessl.io/pricing/.
 
 Then read a step's README and run its commands.
